@@ -67,3 +67,27 @@ Para no abrumarnos con diferentes lenguajes y/o herramientas, vamos a utilizar A
 
 18) Debería de salir "¡Hola Mundo!" impreso en la consola de abajo
 
+
+
+## Constantes, Variables y tipos de datos en Kotlin
+Las variables son lo más mínimo y fundamental en la programación, hay que pensarlas como una caja que guarda un dato/valor.
+Estos datos tienen un tipo, todos los lenguajes de programación tienen sus propios Tipos de datos
+Estos son algunos de los tipos de datos de Kotlin:
+
+### Numéricos
+- Int 
+
+- Long
+
+- Float
+
+- Double
+
+### Alfanuméricos
+- Char
+
+- String
+
+### Booleanos
+
+- Boolean
