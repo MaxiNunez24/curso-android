@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Clase_2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Clase_2"
             }
           }
         ]
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "bea9a761787e76de",
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Lessons.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de README"
+              "title": "Enlaces entrantes de Lessons"
             }
           },
           {
@@ -170,6 +171,11 @@
   },
   "active": "68dec1573d19547c",
   "lastOpenFiles": [
+    "gradle/libs.versions.toml~",
+    "Clase_1.md",
+    "Clase_2.md",
+    "README.md~",
+    "README.md",
     "app/src/main/res/xml/data_extraction_rules.xml~",
     "app/src/main/res/xml/backup_rules.xml~",
     "app/src/main/res/values-night/themes.xml~",
@@ -178,9 +184,6 @@
     "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml~",
     "app/src/main/res/drawable/ic_launcher_foreground.xml~",
     "app/src/main/res/drawable/ic_launcher_background.xml~",
-    "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml~",
-    "app/src/androidTest/java/com/MaxiNunez24/curso_android/ExampleInstrumentedTest.kt~",
-    "app/src/test/java/com/MaxiNunez24/curso_android/ExampleUnitTest.kt~",
     "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
     "app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
     "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
@@ -190,7 +193,6 @@
     "app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
     "app/src/main/res/mipmap-mdpi/ic_launcher.webp",
     "app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
-    "app/src/main/res/mipmap-hdpi/ic_launcher.webp",
-    "README.md"
+    "app/src/main/res/mipmap-hdpi/ic_launcher.webp"
   ]
 }

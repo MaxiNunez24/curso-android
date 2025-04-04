@@ -45,7 +45,7 @@ El curso combina teoría y práctica, mediante:
 ## Horarios de Clase
 
 - **Miércoles: 14:00 - 16:40**  
-- **Viernes: 16:00 - 19:20**
+- **Viernes: 14:00 - 17:20**
 
 ## Requisitos
 

@@ -1,5 +1,10 @@
 # Clases del curso de Desarrollo de Aplicaciones Móviles
 
+## Introducción a la informática
+"Información Automática"
+	La Informática es un área de la ciencia que estudia el hardware, las redes de datos y el software necesarios para tratar información de forma automática.
+#### Clase de breve historia sobre la informática y enseñar el código binario...
+
 ## Preparando el entorno
 Para empezar vamos a tener que programar con un IDE (Entorno de Desarrollo Integrado), es un programa que, similar a como utilizamos Paint para "pintar" este en cambio, se utiliza para programar. 
 Dependiendo de lo que se vaya a programar se utiliza un IDE u otro, para Android tenemos un IDE oficial llamado Android Studio. Fue creado por JetBrains, que es la empresa que creó Kotlin (el lenguaje de programación que vamos a utilizar) entre otros IDEs muy utilizados en la industria.
@@ -18,7 +23,7 @@ Para no abrumarnos con diferentes lenguajes y/o herramientas, vamos a utilizar A
 
 6) Ponerle al proyecto el nombre CursoAplicacionesMoviles
 
-7) Ponerle al package name (Identificador único de la aplicación) com."NOMBRE".cfp401.cursoAppsMoviles
+7) Ponerle al package name (Identificador único de la aplicación) com.sunombre.cfp401.cursoappsmoviles
 
 8) Seleccionar una ruta donde guardar el proyecto (dejarla en el escritorio o recordar la ruta por defecto)
 
@@ -43,9 +48,7 @@ Para no abrumarnos con diferentes lenguajes y/o herramientas, vamos a utilizar A
     
 14) La instrucción package da a entender que el archivo está en ese "directorio"/paquete
 
-15) Para ejecutar código de prueba en Android Studio sin tener que crear una aplicación escribimos lo siguiente:
-    (Nos va a servir para aprender a programar)
-    
+15) Para ejecutar código en Kotlin necesitamos una función main escribimos lo siguiente:
     **fun main(){
         // Acá va el código
     }**
@@ -66,28 +69,3 @@ Para no abrumarnos con diferentes lenguajes y/o herramientas, vamos a utilizar A
 17) Dar click en el botón de "Play"/Run
 
 18) Debería de salir "¡Hola Mundo!" impreso en la consola de abajo
-
-
-
-## Constantes, Variables y tipos de datos en Kotlin
-Las variables son lo más mínimo y fundamental en la programación, hay que pensarlas como una caja que guarda un dato/valor.
-Estos datos tienen un tipo, todos los lenguajes de programación tienen sus propios Tipos de datos
-Estos son algunos de los tipos de datos de Kotlin:
-
-### Numéricos
-- Int 
-
-- Long
-
-- Float
-
-- Double
-
-### Alfanuméricos
-- Char
-
-- String
-
-### Booleanos
-
-- Boolean
