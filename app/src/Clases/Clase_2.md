@@ -1,6 +1,3 @@
-
----
-
 ## 1. Programa Principal y Uso de `println`
 
 ### Ejemplo Pedagógico
@@ -55,7 +52,7 @@ fun main() {
 Crea un programa que declare:
 1. Una variable `nombre` (String) para almacenar el nombre de una persona.
 2. Una variable `edad` (Int) para almacenar su edad.
-3. Una variable `estatura` (Double) para almacenar su estatura en metros.  
+3. Una variable `altura` (Double) para almacenar su altura en metros.  
 Luego, imprime una oración que combine estas variables, por ejemplo:  
 *"Mi nombre es [nombre], tengo [edad] años y mido [estatura] metros."*
 
