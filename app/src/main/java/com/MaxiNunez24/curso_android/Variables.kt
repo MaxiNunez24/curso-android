@@ -76,8 +76,10 @@ fun main() {
 
     println("Hasta ahora llegaron $cantAlumnos")
 
-    cantAlumnos = cantAlumnos + 1
+    cantAlumnos = cantAlumnos + 1 // actualiza a 7
     cantAlumnos += 1 // es igual a lo de arriba
+
+    cantAlumnos *= 2
 
     println("Ahora son $cantAlumnos")
 
@@ -105,13 +107,12 @@ fun main() {
     resultado = num1 / num2
     println("División Entera: $resultado")
 
+    // Módulo %
+    resultado = num1 % num2 // el resto de la división
+    println("Módulo de $num1 / $num2: $resultado")
+
     // Potenciacion .pow(n)
     num3.pow(2)
-
-    // Módulo %
-    resultado = num1 % num2
-    println("Módulo de 5 / 2: $resultado")
-
 
     /*
         Operadores de
@@ -145,13 +146,13 @@ fun main() {
 
     // AND  &&
     print("AND: ")
-    println( (num1 > num2) && (num2 != num1) )
+    println( (num1 < num2) && (num2 != num1) )
     // true cuando todas sean true
     // false con que una sea false
 
     // OR   ||
     print("OR: ")
-    println( (num1 <= num2) || (num1 == num2) )
+    println( (num1 >= num2) || (num1 == num2) )
     // true con que una sea verdadera
     // false cuando todas sean false
 
@@ -160,9 +161,4 @@ fun main() {
     println( "NOT: $resultadoLogico" )
     // Niega el valor que tenía
 
-
-
-
-
 }
-

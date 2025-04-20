@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "app/src/Clases/Clase_1.md",
+                "file": "app/src/Clases/Clase_2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clase_1"
+              "title": "Clase_2"
             }
           }
         ]
@@ -171,6 +171,7 @@
   },
   "active": "68dec1573d19547c",
   "lastOpenFiles": [
+    "app/src/Clases/Clase_1.md",
     "README.md",
     "gradle/libs.versions.toml~",
     "Clase_1.md",
