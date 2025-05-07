@@ -1,7 +1,7 @@
 # Curso de Desarrollo de Aplicaciones Móviles  
 **CFP N°401 "Laura Vicuña"**
 
-Bienvenidos al curso de Desarrollo de Aplicaciones Móviles. En este curso aprenderemos a programar utilizando el lenguaje **Kotlin** y a desarrollar aplicaciones para Android con **Android Studio**. La metodología se centra en la práctica: desde el primer día trabajarás en código real, compilando y ejecutando tus aplicaciones. Vamos a ir avanzando de a poco y sumando nuevos desafíos, mediante el desarrollo de **3 aplicaciones reales**, que te permitirán dominar los componentes fundamentales de Android Studio.
+Bienvenidos al curso de Desarrollo de Aplicaciones Móviles. En este curso aprenderemos a programar utilizando el lenguaje de programación **Kotlin** y a desarrollar aplicaciones para Android con **Android Studio**. La metodología se centra en la práctica: desde el primer día trabajarás en código real, compilando y ejecutando tus aplicaciones. Vamos a ir avanzando de a poco y sumando nuevos desafíos, mediante el desarrollo de **3 aplicaciones reales**, que te permitirán dominar los componentes fundamentales de Android Studio.
 
 ## Descripción del Curso
 

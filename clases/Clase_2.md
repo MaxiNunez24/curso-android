@@ -216,13 +216,3 @@ fun main() {
    - "Otro tipo" para cualquier otro caso.
 
 2. Prueba la función en `main` con diferentes tipos de datos: un entero par, un entero impar, una cadena vacía, una cadena con texto y algún valor booleano.
-
----
-
-## Consideraciones Finales
-
-- **Interactividad:** Durante la clase, puedes escribir y ejecutar estos ejemplos en tiempo real, animando a los estudiantes a modificar los valores y observar los cambios en el comportamiento del programa.  
-- **Discusión en Grupo:** Luego de cada ejercicio, invita a los alumnos a comentar sus soluciones y discutir las diferencias en el uso de cada estructura.
-- **Preguntas Abiertas:** Plantea preguntas del tipo “¿Qué pasaría si…?” para incentivar el pensamiento crítico y la experimentación.
-
-Estos ejemplos y ejercicios están diseñados para que los estudiantes puedan ver cómo se aplican los conceptos en diferentes escenarios y para que puedan practicar de manera interactiva. ¿Te gustaría agregar algún otro tema o profundizar en algún aspecto en particular?

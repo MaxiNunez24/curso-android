@@ -1,4 +1,4 @@
-package com.sunombre.cfp401.cursoaplicacionesmoviles
+package com.MaxiNunez24.curso_android
 
 import kotlin.math.pow
 
@@ -13,7 +13,7 @@ fun main() {
         Este es un comentario
         de varias líneas
      */
-
+    
     /**
      * 1) Saludar con su nombre
      */

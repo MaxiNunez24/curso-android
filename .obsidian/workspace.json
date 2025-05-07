@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "28279d7bef0f1c0f",
+        "id": "20ede91dece51e74",
         "type": "tabs",
         "children": [
           {
-            "id": "68dec1573d19547c",
+            "id": "046ed8c0b76bc14a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "app/src/Clases/Clase_2.md",
+                "file": "clases/Definiciones_y_aclaraciones/ALU.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Clase_2"
+              "title": "ALU"
+            }
+          },
+          {
+            "id": "3b62992bc19bcb9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "clases/Definiciones_y_aclaraciones/ALU.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ALU"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 231.5
   },
   "right": {
     "id": "bea9a761787e76de",
@@ -95,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lessons.md",
+                "file": "Clases/Definiciones y aclaraciones/Kotlin.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de Lessons"
+              "title": "Enlaces entrantes de Kotlin"
             }
           },
           {
@@ -169,31 +183,50 @@
       "command-palette:Abrir paleta de comandos": false
     }
   },
-  "active": "68dec1573d19547c",
+  "active": "3b62992bc19bcb9e",
   "lastOpenFiles": [
-    "app/src/Clases/Clase_1.md",
-    "README.md",
+    "app/src/main/java/com/MaxiNunez24/curso_android/Variables.kt~",
+    "clases/Definiciones_y_aclaraciones/Memoria_RAM.md",
+    "clases/Definiciones_y_aclaraciones/ALU.md",
+    "clases/Definiciones_y_aclaraciones/CPU.md",
+    "clases/01_Introduccion_a_la_informatica.md",
+    "clases/Adjuntos/procesador.png",
+    "clases/Adjuntos",
+    "clases/00_Indice_general.md",
+    "clases/02_Introduccion_a_la_Programacion.md",
+    "clases/Definiciones_y_aclaraciones/Hardware.md",
+    "clases/Definiciones_y_aclaraciones/Sistema_operativo.md",
+    "clases/Definiciones_y_aclaraciones/Software.md",
+    "clases/Definiciones_y_aclaraciones/Android_studio.md",
+    "clases/Definiciones_y_aclaraciones/IDE.md",
+    "clases/Definiciones_y_aclaraciones/Android.md",
+    "clases/Definiciones_y_aclaraciones/Kotlin.md",
+    "clases/Definiciones_y_aclaraciones/Plantilla para definición.md",
+    "ConceptoRelacionado1.md",
+    "clases/Definiciones_y_aclaraciones/Adjuntos/software.png",
+    "clases/Definiciones_y_aclaraciones/Adjuntos/hardware.png",
+    "Pasted image 20250429214717.png",
+    "clases/Definiciones_y_aclaraciones/Adjuntos",
+    "Definiciones_y_aclaraciones/Funcion_main.md",
+    "clases/Clase_1.md",
     "gradle/libs.versions.toml~",
+    "Definiciones_y_aclaraciones",
+    "clases/Clase_2.md",
+    "README.md",
+    "clases/Definiciones_y_aclaraciones",
+    "clases",
+    "app/src/Clases/Clase_1.md",
+    "app/src/Clases/Clase_2.md",
     "Clase_1.md",
     "Clase_2.md",
     "README.md~",
     "app/src/main/res/xml/data_extraction_rules.xml~",
     "app/src/main/res/xml/backup_rules.xml~",
-    "app/src/main/res/values-night/themes.xml~",
-    "app/src/main/res/values/colors.xml~",
-    "app/src/main/res/values/themes.xml~",
-    "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml~",
-    "app/src/main/res/drawable/ic_launcher_foreground.xml~",
-    "app/src/main/res/drawable/ic_launcher_background.xml~",
     "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
     "app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
     "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
     "app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
     "app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
-    "app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
-    "app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
-    "app/src/main/res/mipmap-mdpi/ic_launcher.webp",
-    "app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
-    "app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    "app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
   ]
 }
