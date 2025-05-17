@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android
+package com.MaxiNunez24.curso_android.Sintaxis
 
 import kotlin.math.pow
 
@@ -160,5 +160,7 @@ fun main() {
     resultadoLogico = !(num1 > num2)
     println( "NOT: $resultadoLogico" )
     // Niega el valor que tenía
+
+    
 
 }

@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "clases/Definiciones_y_aclaraciones/ALU.md",
+                "file": "clases/00_Indice_general.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ALU"
+              "title": "00_Indice_general"
             }
           }
         ],
@@ -185,9 +185,9 @@
   },
   "active": "3b62992bc19bcb9e",
   "lastOpenFiles": [
+    "clases/Definiciones_y_aclaraciones/ALU.md",
     "app/src/main/java/com/MaxiNunez24/curso_android/Variables.kt~",
     "clases/Definiciones_y_aclaraciones/Memoria_RAM.md",
-    "clases/Definiciones_y_aclaraciones/ALU.md",
     "clases/Definiciones_y_aclaraciones/CPU.md",
     "clases/01_Introduccion_a_la_informatica.md",
     "clases/Adjuntos/procesador.png",

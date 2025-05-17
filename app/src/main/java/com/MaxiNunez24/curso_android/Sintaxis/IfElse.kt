@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android
+package com.MaxiNunez24.curso_android.Sintaxis
 
 /* Estructura de Control IfElse!
     Es también llamada Condicional
