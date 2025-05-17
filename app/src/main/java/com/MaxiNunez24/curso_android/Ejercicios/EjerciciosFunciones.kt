@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android
+package com.MaxiNunez24.curso_android.Ejercicios
 
 fun main(){
     println("La suma de dos números es " + (5 + 2)) // Concatenación

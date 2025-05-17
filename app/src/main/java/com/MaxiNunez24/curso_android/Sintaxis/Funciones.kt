@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android
+package com.MaxiNunez24.curso_android.Sintaxis
 /*
     Una función es una caja negra que
     realiza una acción y nos devuelve,
