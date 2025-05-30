@@ -27,6 +27,31 @@ fun ejercicioArray2_0(){
     println("La suma total es: $sumaTotal")
 }
 
+fun ejercicioArray3(){
+    val numeros : Array<Int> =
+        arrayOf(5,2,3,24,55,1,35,-3,33,3,24,12,4)
+    var minimo : Int = Int.MAX_VALUE
+    var maximo : Int = Int.MIN_VALUE
+
+    for(num in numeros){
+        if(num < minimo) minimo = num
+        if(num > maximo) maximo = num
+    }
+    println("El mínimo número es: $minimo")
+    println("El máximo número es: $maximo")
+}
+
+fun ejercicioArray3_0(){
+    val numeros : Array<Int> =
+        arrayOf(5,2,3,24,55,1,35,-3,33,3,24,12,4)
+    var minimo : Int = numeros.min()
+    var maximo : Int = numeros.max()
+    println("El mínimo número es: $minimo")
+    println("El máximo número es: $maximo")
+}
+
+
+
 fun main(){
-    ejercicioArray2_0()
+    ejercicioArray3_0()
 }
