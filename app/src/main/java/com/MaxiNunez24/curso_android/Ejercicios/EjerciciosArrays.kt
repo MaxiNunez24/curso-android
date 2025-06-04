@@ -50,8 +50,32 @@ fun ejercicioArray3_0(){
     println("El máximo número es: $maximo")
 }
 
+/** Contar pares
+Cuenta cuántos elementos pares
+hay en un array de enteros.
+ */
+/**
+ * TODO:
+ * X 1. Recibir el array por parámetro
+ * 2. Inicializar un contador en 0
+ * 3. Mientras recorro el arreglo
+ * 3.1. Si el módulo de un elem por 2 es = 0
+ * 3.2. Entonces incremento el cont de pares
+ * 4. Imprimo el contador
+ */
+fun ejercicioArray4(numeros : Array<Int>) {
+    var contador: Int = 0
+    val pares : ArrayList<Int> = arrayListOf()
+    for(num in numeros) {
+        if(num % 2 == 0){
+            contador++
+            pares.add(num)
+        }
+    }
+    println("Los pares son $pares y en total son: $contador")
+}
 
 
 fun main(){
-    ejercicioArray3_0()
+    ejercicioArray4(arrayOf(1,2,3,4,5,56,27,8,19))
 }
