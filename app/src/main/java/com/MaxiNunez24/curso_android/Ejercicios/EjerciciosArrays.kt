@@ -56,7 +56,7 @@ hay en un array de enteros.
  */
 /**
  * TODO:
- * X 1. Recibir el array por parámetro
+ * 1. Recibir el array por parámetro
  * 2. Inicializar un contador en 0
  * 3. Mientras recorro el arreglo
  * 3.1. Si el módulo de un elem por 2 es = 0
@@ -76,6 +76,41 @@ fun ejercicioArray4(numeros : Array<Int>) {
 }
 
 
-fun main(){
-    ejercicioArray4(arrayOf(1,2,3,4,5,56,27,8,19))
+/* Reemplazo simple
+    En un array de Strings con nombres de colores, reemplaza las ocurrencias de "rojo" por "ROJO".
+ */
+/**
+ * TODO:
+ * 1. Recibir arreglo por parámetro
+ * 2. Recorrer el arreglo.withIndex()
+ * 3. Si el elem actual es == "rojo"
+ * 3.1. arreglo[indice] = elem.toUpperCase()
+ * 4. imprimir el arreglo
+ */
+fun ejercicioArray5(colores : ArrayList<String>){
+    for((indice, color) in colores.withIndex()){
+        if(color == "rojo") colores[indice] = color.uppercase()
+    }
+    println(colores)
+}
+
+fun ejercicioArray6(gradosCelsius : Array<Double>) : List<Double> {
+    val gradosFahrenheit : List<Double> = gradosCelsius.map{(it * 9/5) + 32}
+    return gradosFahrenheit
+}
+
+
+
+
+fun main() {
+
+    fun birthdayGreeting(name: String, age: Int = 18, height: Double = 1.60) : String {
+        val nameGreeting = "Happy Birthday, $name!"
+        val ageGreeting = "You are now $age years old!"
+        return "$nameGreeting\n$ageGreeting"
+    }
+
+    println(message = birthdayGreeting(age = 21, name = "Maxi"))
+    println(birthdayGreeting(name = "Ramiro", height = 1.84))
+
 }

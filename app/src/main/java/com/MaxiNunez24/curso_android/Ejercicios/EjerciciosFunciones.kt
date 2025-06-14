@@ -11,8 +11,8 @@ fun areaRectangulo(base: Double, altura: Double): String{
     return "El área del rectángulo es: ${base * altura}" // Expresión dentro de un String
 }
 
-fun convertirCelsiusAFahrenheit(celsius: Double = 1.0): String{
-    return "La temperatura en Fahrenheit es: ${(celsius * 9/5) + 32}"
+fun convertirCelsiusAFahrenheit(celsius: Double = 1.0): Double{
+    return (celsius * 9/5) + 32
 }
 
 
