@@ -46,22 +46,70 @@ fun ejercicio6(){
     println("$firstNumber + $secondNumber = $result")
 }
 
-
-
-
 fun potencia(base: Int, exponente: Int) : Int {
-    var resultado = 2
-    var contador = 1
-    while(contador < exponente) {
-        contador = contador + 1
-        resultado = resultado * base
-
-    }
-    return resultado
+    var result : Int = 1
+    for(i in 1..exponente) result = result * base
+    return result
 }
 
+fun ejercicio7() {
+    fun add(num1: Int, num2: Int) : Int {
+        return num1 + num2
+    }
+
+    fun substract(num1: Int, num2: Int) : Int{
+        return num1 - num2
+    }
+
+    val firstNumber = 10
+    val secondNumber = 5
+    val thirdNumber = 8
+
+    val result = add(firstNumber, secondNumber)
+    val anotherResult = substract(firstNumber, thirdNumber)
+
+    println("$firstNumber + $secondNumber = $result")
+    println("$firstNumber - $thirdNumber = $anotherResult")
+}
+
+fun ejercicio8(){
+    val operatingSystem = "Chrome OS"
+    val emailId = "sample@gmail.com"
+
+    println(displayAlertMessage(operatingSystem, emailId))
+}
+
+fun ejercicio81(){
+    val firstUserEmailId = "user_one@gmail.com"
+
+    // The following line of code assumes that you named your parameter as emailId. 
+    // If you named it differently, feel free to update the name.
+    println(displayAlertMessage(email = firstUserEmailId))
+    println()
+
+    val secondUserOperatingSystem = "Windows"
+    val secondUserEmailId = "user_two@gmail.com"
+
+    println(displayAlertMessage(secondUserOperatingSystem, secondUserEmailId))
+    println()
+
+    val thirdUserOperatingSystem = "Mac OS"
+    val thirdUserEmailId = "user_three@gmail.com"
+
+    println(displayAlertMessage(thirdUserOperatingSystem, thirdUserEmailId))
+    println()
+}
+
+fun displayAlertMessage(os: String = "Unknown OS", email: String): String =
+    "There's a new sign-in request on $os for your Google Account $email."
+
+
 fun main(){
-    // eleve 4 al cuadrado (4²)
-    var resultado: Int = potencia(2,5)
-    println(resultado)
+
+    fun pepe(dato: Int, otroDato: String): Int{
+        println(otroDato)
+        return dato + 5
+    }
+
+    println(pepe(otroDato = "Hola",dato = 5))
 }
