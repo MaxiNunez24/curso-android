@@ -61,5 +61,3 @@ Para cualquier consulta o inconveniente, puedes comunicarte a:
 - **Correo:** maxinunez2455@gmail.com
 
 ¡Bienvenidos y a programar! 
-
-[Sintaxis]()
