@@ -11,7 +11,8 @@
 - [🧑‍💻 `readln()` – Leer datos del usuario](#🧑‍💻%20`readln()`%20–%20Leer%20datos%20del%20usuario)
 - [🧭 Estructuras de Control](#🧭%20Estructuras%20de%20Control)
 - [🛠 Funciones Personalizadas](#🛠%20Funciones%20Personalizadas)
-- 
+- [✨ Ejercicios de repaso](#✨%20Ejercicios%20de%20repaso)
+- [👨‍🎓 Programación Orientada a Objetos (POO)](#👨‍🎓%20Programación%20Orientada%20a%20Objetos%20(POO))
 
 ## ¿Qué es un programa?
 ![](Programa-Algoritmo.png)
@@ -602,4 +603,308 @@ fun mostrar() {
 ![](Sintaxis%20de%20funciones.png)
 
 ---
+## ✨ Ejercicios de repaso
 
+**Objetivo:** reforzar lo visto hasta ahora: funciones, `readln()`, tipos de datos, estructuras de control (`if`, `when`, `while`, `for`) y casteo de tipos.
+
+### ✅ Ejercicios propuestos
+
+#### 1. Ingreso de datos básicos
+
+**Enunciado:** Pedir al usuario su nombre, edad y altura. Luego imprimir un mensaje como:
+
+> Hola `nombre`, tenés `edad` años y medís `altura` metros.
+
+**Pista:** recordá que los valores ingresados son `String`. Usá `toInt()` y `toFloat()` si necesitás convertirlos.
+
+---
+
+#### 2. Mayoría de edad
+
+**Enunciado:** A partir de la edad ingresada, imprimir si es mayor o menor de edad.
+
+**Pista:** `if (edad >= 18)`
+
+---
+
+#### 3. Clasificación de nota
+
+**Enunciado:** Ingresar una nota del 0 al 10 y mostrar el resultado con `when`:
+
+- 10: Excelente
+    
+- 7 a 9: Aprobado
+    
+- 0 a 6: Desaprobado
+
+**Pista:** podés usar rangos como `in 7..9`
+
+---
+
+#### 4. Contador ascendente
+
+**Enunciado:** Usar un `for` que imprima los números del 1 al 10.
+
+---
+
+#### 5. Contador descendente
+
+**Enunciado:** Usar `while` para imprimir desde 5 hasta 1.
+
+**Pista:** inicializá una variable con 5 y restale 1 en cada iteración.
+
+---
+
+#### 6. Promedio de notas
+
+**Enunciado:** Ingresar 3 notas (pueden tener decimales), calcular el promedio y mostrarlo
+**Pista:** recordá que el promedio es la suma de los valores dividido la cantidad de valores
+
+---
+
+## 👨‍🎓 Programación Orientada a Objetos (POO)
+- [✨ Introducción](#✨%20Introducción)
+- [📚 Conceptos clave](#📚%20Conceptos%20clave)
+- [📝 ¿Cómo se crea una clase?](#📝%20¿Cómo%20se%20crea%20una%20clase?)
+- [🚗 Ejemplo: Clase `Auto`](#🚗%20Ejemplo%20Clase%20`Auto`)
+- [📒 Constructor principal](#📒%20Constructor%20principal)
+- [🧰 Funciones vs Métodos](#🧰%20Funciones%20vs%20Métodos)
+- [🧬 Herencia](#🧬%20Herencia)
+### ✨ Introducción
+
+> La POO es un paradigma de programación que permite modelar el mundo real mediante **objetos**.
+
+En Kotlin, los objetos se crean a partir de **clases**, que definen su estructura interna:
+
+- **Atributos**: representan el _estado_ del objeto (como variables).
+    
+- **Métodos**: representan su _comportamiento_ (como funciones).
+
+---
+
+### 📚 Conceptos clave
+
+#### 📊 Objeto
+
+Entidad que representa algo del mundo real. Tiene:
+
+- **Estado:** atributos (variables internas)
+    
+- **Comportamiento:** métodos (funciones internas)
+
+#### 💼 Clase
+
+Es una _plantilla_ para crear objetos. Define:
+
+- Qué atributos tendrán
+    
+- Qué métodos compartirán los objetos de esa clase
+
+---
+### 📝 ¿Cómo se crea una clase?
+en Kotlin usamos esta forma:
+![](Sintaxis%20para%20clases.png)
+```Kotlin
+class NombreDeLaClase(var atrib1: String, val atrib2: Int){
+	var atribFueraDelConstructor = 0
+
+	fun metodo1(param1: String): String {
+		return "parametro 1: $param1"
+	}
+
+	fun metodo2() { println("Holaaa") }
+}
+```
+#### 📊 Instanciamos la clase
+![](Sintaxis%20instanciar%20objeto.png)
+```Kotlin
+fun main() {
+	val miObjeto = NombreDeLaClase("Atributo1", 264)
+	miObjeto.metodo1("Llamo al método 1")
+	miObjeto.atribFueraDeConstructor = 20
+	miObjeto.metodo2()
+}
+```
+
+---
+### 🚗 Ejemplo: Clase `Auto`
+
+```kotlin
+class Auto(val marca: String, val modelo: String, var color: String) {
+	// Atributos en el constructor principal ↑ para instanciar el objeto
+    var velocidad = 0 // Atributos que no son necesarios en el constructor
+
+	// Métodos
+    fun acelerar() {
+        velocidad += 10
+        println("Velocidad actual: $velocidad km/h")
+    }
+
+    fun frenar() {
+        velocidad = 0
+        println("Auto detenido.")
+    }
+}
+```
+
+#### ⚡ Uso del objeto
+
+```kotlin
+fun main() {
+    val miAuto = Auto("Ford", "Mustang", "Azul")
+    
+    println("Color: ${miAuto.color}") // Imprime -> Color: Azul
+    println("Marca: ${miAuto.marca}") // Imprime -> Marca: Ford
+
+    miAuto.acelerar() // Imprime -> Velocidad actual: 10 km/h
+    miAuto.frenar() // Imprime -> Auto detenido.
+}
+```
+
+---
+### 📒 Constructor principal
+
+El constructor sirve para instanciar (crear) objetos con valores iniciales.
+
+```kotlin
+class Persona(val nombre: String, var edad: Int) {
+    fun saludar() {
+        println("Hola, me llamo $nombre.")
+    }
+
+    fun cumplirAnios() {
+        edad++
+        println("Ahora tengo $edad años.")
+    }
+}
+```
+
+---
+### 🧰 Funciones vs Métodos
+
+- **Función**: existe por fuera de las clases
+
+```kotlin
+fun saludar(nombre: String) = "Hola $nombre" // El = reemplaza al return
+```
+
+- **Método**: está definido dentro de una clase
+
+```kotlin
+class Persona(val nombre: String) {
+    fun saludar() = "Hola soy $nombre" // El = reemplaza al return
+}
+```
+
+---
+## 🧬 Herencia
+
+Podemos extender clases existentes para reutilizar sus atributos y métodos.
+
+- Para eso se utiliza la palabra clave `open` antes de `class` en la **clase padre** para que esta permita extenderse.
+- Y luego del constructor principal de la **clase hija** se agregan `:`  seguidos del constructor de la **clase padre**
+
+```kotlin
+open class Animal(val nombre: String) {
+    fun dormir() = println("Zzz...")
+}
+
+class Perro(nombre: String) : Animal(nombre) {
+    fun ladrar() = println("Guau!")
+}
+```
+![](Ejemplo%20herencia%20UML.png)
+El perro tiene **todo lo de su clase padre (Animal)** y además el método propio **`ladrar()`**
+
+---
+
+## 🎓 Ejercicios de Programación Orientada a Objetos
+
+### 1. Clase `CuentaBancaria`
+
+**Enunciado:**
+
+- Crear una clase `CuentaBancaria` con:
+    
+    - Atributos: `titular: String`, `saldo: Double`
+        
+    - Métodos:
+        
+        - `depositar(cantidad: Double)`
+            
+        - `extraer(cantidad: Double)`
+            
+        - `mostrarSaldo()`
+
+**Pista:** validá que no se pueda extraer más de lo que hay.
+
+---
+
+### 2. Clase `Rectangulo`
+
+**Enunciado:**
+
+- Crear una clase `Rectangulo` con:
+    
+    - Atributos: `base: Int`, `altura: Int`
+        
+    - Métodos:
+        
+        - `area()` que devuelva el área
+            
+        - `perimetro()` que devuelva el perímetro
+            
+**Pista:** recordá que:  `área = base * altura` y `perímetro = suma de los lados`
+
+---
+
+### 3. Herencia: `Empleado` y `Gerente`
+
+**Enunciado:**
+
+- Crear clase padre `Empleado(nombre, sueldo)` con método `mostrarDatos()`
+    
+- Crear clase hija `Gerente` que agrega un atributo `departamento` y sobreescriba `mostrarDatos()` para incluirlo
+
+**Pista:** para sobreescribir un método de la clase padre se usa lo siguiente:
+```Kotlin
+open class ClasePadre {  
+    open fun metodoDeClasePadre(){  
+        println("Holaaa!")  
+    }  
+}
+
+class ClaseHija : ClasePadre() {  
+    override fun metodoDeClasePadre(){  
+        super.metodoDeClasePadre() // Imprime "Holaaa!"  
+        println("Mundooo!")  // Imprime "Mundooo!"
+    }  
+}
+```
+
+---
+
+### 4. Clase `Alumno`
+
+**Enunciado:**
+
+- Crear una clase `Alumno(nombre, notas: List<Float>)`
+    
+- Método `promedio()` que calcule el promedio de notas
+    
+- Método `aprobo()` que devuelva `true` si el promedio es mayor o igual a 6
+
+**Pista:** usá `notas.average()`
+
+---
+
+### 5. Crear una clase propia
+
+**Desafío libre:** Inventá una clase propia (como `Libro`, `Videojuego`, `Mascota`, etc.) que tenga:
+
+- Al menos 3 atributos
+    
+- Al menos 2 métodos
+    
+- Y creá al menos 1 objeto con ella en `main()`
+---
