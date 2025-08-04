@@ -1,5 +1,5 @@
 # Resumen general - Kotlin
-- [¿Qué es un programa?](#¿Qué%20es%20un%20programa?)
+- [¿Qué es un programa?](#que-es-un-programa)
 - [🧑🏻‍💻Para empezar a programar](#🧑🏻‍💻Para%20empezar%20a%20programar)
 - [▶️​ `fun main()` - Función principal](#▶️​%20`fun%20main()`%20-%20Función%20principal)
 - [🖨️​ `println()` - Imprimir por terminal](#🖨️​%20`println()`%20-%20Imprimir%20por%20terminal)
