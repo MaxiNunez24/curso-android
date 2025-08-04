@@ -2,7 +2,7 @@
 - [2do paso - Seleccionar No Activity](##2do%20paso)
 - [3er paso - Completar los datos del proyecto](##3er%20paso)
 - [4to paso - Esperar a que cargue el proyecto](#4to%20paso)
-- 
+- [5to paso - Crear un archivo Kotlin](#5to%20paso)
 
 
 ## 1er paso
@@ -117,7 +117,19 @@ Ahora podemos empezar a crear nuestro primer archivo
 ![](Android%20view.png)
 ## 5to paso
 ### Crear un archivo kotlin
-Para crear un nuevo archivo en Android Studio primero 
+Para crear un nuevo archivo en Android Studio primero debemos de dar
 ![](Click%20derecho%20sobre%20el%20paquete.png)
-
+Después les saldrá este menú donde siguen estos pasos
+![](Crear%20nuevo%20archivo.png)
+Una vez que le hayamos dado click izquierdo nos saldrá este otro menú donde debemos ingresar el **nombre** que queremos darle a nuestro archivo y el tipo del mismo. Para empezar usaremos el tipo **File**.
+![](Kotlin%20file.png)
+Luego de ingresar el nombre, y dar **"Doble click"** o **"Enter"**. Vemos como nuestro archivo ha sido creado y podemos empezar a programar!
+![](Creación%20de%20archivo%20kotlin.png)
+#### Resumen
+1. Click derecho sobre `com.sunombre.cfp401.cursoandroid`
+2. Posicionar el cursor sobre `New` y esperar al siguiente menú
+3. Click izquierdo sobre Kotlin Class/File
+4. Ingresar `Nombre` del archivo y dar `Doble click` o `Enter` en File
+5. Dar doble click para abrir el archivo (en caso de que no se abra por defecto)
+6. A programar!
 
