@@ -1,48 +1,48 @@
 # Resumen general - Kotlin
-- [¿Qué es un programa?](#qué-es-un-programa)
-- [🧑🏻‍💻Para empezar a programar](#🧑🏻‍💻Para%20empezar%20a%20programar)
-- [▶️​ `fun main()` - Función principal](#▶️​%20`fun%20main()`%20-%20Función%20principal)
-- [🖨️​ `println()` - Imprimir por terminal](#🖨️​%20`println()`%20-%20Imprimir%20por%20terminal)
-- [🌱 Introducción a las Variables](#🌱%20Introducción%20a%20las%20Variables)
-- [🔁 `var` vs `val` — Mutabilidad](#🔁%20`var`%20vs%20`val`%20—%20Mutabilidad)
-- [🧠 ¿Por qué necesitamos representar datos?](#🧠%20¿Por%20qué%20necesitamos%20representar%20datos?)
-- [🔢 Tipos de Datos Básicos](#🔢%20Tipos%20de%20Datos%20Básicos)
-- [🧮 Operadores en Kotlin](#🧮%20Operadores%20en%20Kotlin)
-- [🧑‍💻 `readln()` – Leer datos del usuario](#🧑‍💻%20`readln()`%20–%20Leer%20datos%20del%20usuario)
-- [🧭 Estructuras de Control](#🧭%20Estructuras%20de%20Control)
-- [🛠 Funciones Personalizadas](#🛠%20Funciones%20Personalizadas)
-- [✨ Ejercicios de repaso](#✨%20Ejercicios%20de%20repaso)
-- [👨‍🎓 Programación Orientada a Objetos (POO)](#👨‍🎓%20Programación%20Orientada%20a%20Objetos%20(POO))
+- [¿Qué es un programa?](#que-es-un-programa)
+- [🧑🏻‍💻Para empezar a programar](#para-empezar-a-programar)
+- [▶️​ `fun main()` - Función principal](#fun-main-funcion-principal)
+- [🖨️​ `println()` - Imprimir por terminal](#println-imprimir-por-terminal)
+- [🌱 Introducción a las Variables](#introduccion-a-las-variables)
+- [🔁 `var` vs `val` — Mutabilidad](#var-vs-val-mutabilidad)
+- [🧠 ¿Por qué necesitamos representar datos?](#por-que-necesitamos-representar-datos)
+- [🔢 Tipos de Datos Básicos](#tipos-de-datos-basicos)
+- [🧮 Operadores en Kotlin](#operadores-en-kotlin)
+- [🧑‍💻 `readln()` – Leer datos del usuario](#readln-leer-datos-del-usuario)
+- [🧭 Estructuras de Control](#estructuras-de-control)
+- [🛠 Funciones Personalizadas](#funciones-personalizadas)
+- [✨ Ejercicios de repaso](#ejercicios-de-repaso)
+- [👨‍🎓 Programación Orientada a Objetos (POO)](#programacion-orientada-a-objetos-poo))
 
 ## ¿Qué es un programa?
-![](Programa-Algoritmo.png)
-![](Intercambio%20CPU%20y%20RAM.png)
+![](../recursos/Programa-Algoritmo.png)
+![](../recursos/Intercambio%20CPU%20y%20RAM.png)
 Pero... la CPU no entiende lenguaje humano. Por lo que necesitamos escribir instrucciones en un lenguaje que la máquina pueda entender:
-![](Introducción%20Código%20Binario.png)
-![](Introducción%20Kotlin.png)
+![](../recursos/Introducción%20Código%20Binario.png)
+![](../recursos/Introducción%20Kotlin.png)
 ## 🧑🏻‍💻Para empezar a programar
 ### IDE (Entorno de Desarrollo Integrado)
 Para compilar y ejecutar nuestro código vamos a utilizar el IDE oficial para Android:
 ### Android Studio
-![](Android%20Studio.png)
+![](../recursos/Android%20Studio.png)
 [Descargar Android Studio desde su página oficial](https://developer.android.com/studio?hl=es-419)
 Una vez descargado se debe de instalar y crear un proyecto de la siguiente forma:
 [Crear proyecto y archivos en Android Studio](Crear%20proyecto%20y%20archivos%20en%20Android%20Studio.md)
 
 O en su defecto (también para realizar pruebas rápidas):
 ### Kotlin Playground
-![](Kotlin%20Playground.png)
+![](../recursos/Kotlin%20Playground.png)
 [Kotlin Playground](https://play.kotlinlang.org/)
 
 Una vez dentro podemos empezar a programar...
 ## ▶️​ `fun main()` - Función principal
 Es donde empieza nuestro programa (Punto de entrada)
-![](Punto%20de%20entrada%20al%20programa.png)
+![](../recursos/Punto%20de%20entrada%20al%20programa.png)
 > Comentarios: Son líneas que se ignoran / no se ejecutan. Se utilizan para documentar el código. 
 
 ## 🖨️​ `println()` - Imprimir por terminal
-![](Hola%20Mundo.png)
-![](Terminal%20Hola%20Mundo.png)
+![](../recursos/Hola%20Mundo.png)
+![](../recursos/Terminal%20Hola%20Mundo.png)
 ¡Con esto hicimos nuestro primer programa!
 
 ---
@@ -53,10 +53,10 @@ Cuando programamos, muchas veces necesitamos **guardar información** para poder
 Esa información puede ser un número, un texto, un resultado de una cuenta, entre otras cosas.
 
 Para **almacenar datos**, usamos **variables**.
-- [🧃 ¿Qué es una variable?](#🧃%20¿Qué%20es%20una%20variable?)
-- [📝 ¿Cómo se crea una variable?](#📝%20¿Cómo%20se%20crea%20una%20variable?)
-- [🧠 ¿Para qué sirven?](#🧠%20¿Para%20qué%20sirven?)
-- [🔁 `var` vs `val` — Mutabilidad](#🔁%20`var`%20vs%20`val`%20—%20Mutabilidad)
+- [🧃 ¿Qué es una variable?](#que-es-una-variable)
+- [📝 ¿Cómo se crea una variable?](#como-se-crea-una-variable)
+- [🧠 ¿Para qué sirven?](#para-que-sirven)
+- [🔁 `var` vs `val` — Mutabilidad](#var-vs-val-mutabilidad)
 
 ### 🧃 ¿Qué es una variable?
 
@@ -144,7 +144,7 @@ En Kotlin hay **dos formas** de crear variables, y la diferencia es muy importan
 | ------------- | --------------------------- | --------------------------------- |
 | `var`         | ✅ **Sí**                    | Datos que pueden cambiar          |
 | `val`         | ❌ **No**                    | Datos que no cambian (constantes) |
-- [🎯 ¿Cuándo usar `var` y cuándo `val`?](#🎯%20¿Cuándo%20usar%20`var`%20y%20cuándo%20`val`?)
+- [🎯 ¿Cuándo usar `var` y cuándo `val`?](#cuando-usar-var-y-cuando-val)
 ---
 
 ### 🧪 Veamos un ejemplo con `var` (variable que **cambia**):
@@ -208,11 +208,11 @@ Para eso usamos los **tipos de datos**, que nos permiten modelar **números, tex
 ## 🔢 Tipos de Datos Básicos
 
 En Kotlin existen varios **tipos de datos primitivos**. Vamos a ver los más usados en esta etapa:
-- [✅ Boolean (Lógico)](#✅%20Boolean%20(Lógico))
-- [🔤 Char y String (Texto)](#🔤%20Char%20y%20String%20(Texto))
-- [🔢 Números Enteros](#🔢%20Números%20Enteros)
-- [🔢 Números con Decimales (Punto flotante)](#🔢%20Números%20con%20Decimales%20(Punto%20flotante))
-- [🎒 Resumen](#🎒%20Resumen)
+- [✅ Boolean (Lógico)](#boolean-logico))
+- [🔤 Char y String (Texto)](#char-y-string-texto))
+- [🔢 Números Enteros](#numeros-enteros)
+- [🔢 Números con Decimales (Punto flotante)](#numeros-con-decimales-punto-flotante))
+- [🎒 Resumen](#resumen)
 
 ---
 
@@ -231,7 +231,7 @@ fun main() {
     var prendido: Boolean = false // Se utilizan : para indicar el tipo de dato
 }
 ```
-![](Boolean.png)
+![](../recursos/Boolean.png)
 
 ---
 
@@ -249,7 +249,7 @@ fun main() {
     println(saludo)
 }
 ```
-![](Char%20y%20String.png)
+![](../recursos/Char%20y%20String.png)
 
 ---
 
@@ -275,8 +275,8 @@ fun main() {
 }
 ```
 
-![](Tabla%20Números%20Enteros.png)
-![](Representación%20de%20números%20binarios.png)
+![](../recursos/Tabla%20Números%20Enteros.png)
+![](../recursos/Representación%20de%20números%20binarios.png)
 
 ---
 
@@ -300,7 +300,7 @@ fun main() {
 
 ⚠️ ¡Ojo! Los `Float` deben terminar en **`f`**.
 
-![](Punto%20Flotante.png)
+![](../recursos/Punto%20Flotante.png)
 
 ---
 
@@ -310,7 +310,7 @@ Los números muy grandes o muy pequeños se representan así:
 $$250000 = 2.5 \times 10^{5}$$
 $$0.00008 = 8.0 \times 10^{-5}$$
 
-![](Notación%20científica.png)
+![](../recursos/Notación%20científica.png)
 
 ---
 
@@ -330,11 +330,11 @@ $$0.00008 = 8.0 \times 10^{-5}$$
 
 Los operadores nos permiten **realizar operaciones** con los datos que guardamos en las variables.  
 Pueden ser operaciones matemáticas, comparaciones o decisiones lógicas.
-- [➕ Operadores Matemáticos](#➕%20Operadores%20Matemáticos)
-- [🧪 Operadores de Comparación](#🧪%20Operadores%20de%20Comparación)
-- [🔗 Operadores Lógicos](#🔗%20Operadores%20Lógicos)
-- [🎓 Ejemplo integrador](#🎓%20Ejemplo%20integrador)
-- [🧠 Tip: Evaluación de expresiones](#🧠%20Tip%20Evaluación%20de%20expresiones)
+- [➕ Operadores Matemáticos](#operadores-matematicos)
+- [🧪 Operadores de Comparación](#operadores-de-comparacion)
+- [🔗 Operadores Lógicos](#operadores-logicos)
+- [🎓 Ejemplo integrador](#ejemplo-integrador)
+- [🧠 Tip: Evaluación de expresiones](#tip-evaluacion-de-expresiones)
 
 ---
 ### ➕ Operadores Matemáticos
@@ -356,7 +356,7 @@ fun main() {
 }
 ```
 
-![](Operadores%20matemáticos.png)
+![](../recursos/Operadores%20matemáticos.png)
 
 ---
 ### 🧪 Operadores de Comparación
@@ -380,7 +380,7 @@ fun main() {
 }
 ```
 
-![](Operadores%20de%20comparación.png)
+![](../recursos/Operadores%20de%20comparación.png)
 
 ---
 ### 🔗 Operadores Lógicos
@@ -406,7 +406,7 @@ fun main() {
 📌 **OR (`||`)**: Da `true` si **al menos una** es verdadera  
 📌 **NOT (`!`)**: Invierte el valor (`true` → `false`, y viceversa)
 
-![](Operadores%20lógicos.png)
+![](../recursos/Operadores%20lógicos.png)
 
 ---
 ### 🎓 Ejemplo integrador
@@ -459,7 +459,7 @@ fun main() {
 }
 ```
 
-![](Ejemplo%20readln.png)
+![](../recursos/Ejemplo%20readln.png)
 
 ---
 
@@ -490,13 +490,13 @@ fun main() {
 Nos permiten **tomar decisiones** o **repetir acciones**.
 ### 📚 Tipos de estructuras
 
-| Tipo                                                                                                                          | ¿Para qué sirve?                |
-| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| [🔹 Secuencial](#🔹%20Secuencial)                                                                                             | Ejecutar instrucciones en orden |
-| [🔸 Condicionales (`if` / `else`) y Selección (`when`)](#🔸%20Condicionales%20(`if`%20/%20`else`)%20y%20Selección%20(`when`)) | Ejecutar según una condición    |
-| [🔁 Iteración (`while`) y Repetición (`for`)](#🔁%20Iteración%20(`while`)%20y%20Repetición%20(`for`))                         | Repetir mientras se cumpla algo |
+| Tipo                                                                                             | ¿Para qué sirve?                |
+| ------------------------------------------------------------------------------------------------ | ------------------------------- |
+| [🔹 Secuencial](#secuencial)                                                                     | Ejecutar instrucciones en orden |
+| [🔸 Condicionales (`if` / `else`) y Selección (`when`)](#condicionales-if-else-y-seleccion-when) | Ejecutar según una condición    |
+| [🔁 Iteración (`while`) y Repetición (`for`)](#iteracion-while-y-repeticion-for)                 | Repetir mientras se cumpla algo |
 
-![](Tipos%20de%20estructuras%20de%20control.png)
+![](../recursos/Tipos%20de%20estructuras%20de%20control.png)
 
 ---
 
@@ -511,7 +511,7 @@ fun main() {
     println("Hola, $nombre!")
 }
 ```
-![](Ejemplo%20readln.png)
+![](../recursos/Ejemplo%20readln.png)
 
 ---
 
@@ -541,7 +541,7 @@ val resultado = when (nota) {
 }
 ```
 
-![](Condicionales.png)
+![](../recursos/Condicionales.png)
 
 ---
 ### 🔁 Iteración (`while`) y Repetición (`for`)
@@ -564,7 +564,7 @@ for (i in 1..5) {
 }
 ```
 
-![](Estructuras%20de%20control%20iterativas.png)
+![](../recursos/Estructuras%20de%20control%20iterativas.png)
 
 ---
 ## 🛠 Funciones Personalizadas
@@ -600,7 +600,7 @@ fun mostrar() {
 }
 ```
 
-![](Sintaxis%20de%20funciones.png)
+![](../recursos/Sintaxis%20de%20funciones.png)
 
 ---
 ## ✨ Ejercicios de repaso
@@ -663,13 +663,13 @@ fun mostrar() {
 ---
 
 ## 👨‍🎓 Programación Orientada a Objetos (POO)
-- [✨ Introducción](#✨%20Introducción)
-- [📚 Conceptos clave](#📚%20Conceptos%20clave)
-- [📝 ¿Cómo se crea una clase?](#📝%20¿Cómo%20se%20crea%20una%20clase?)
-- [🚗 Ejemplo: Clase `Auto`](#🚗%20Ejemplo%20Clase%20`Auto`)
-- [📒 Constructor principal](#📒%20Constructor%20principal)
-- [🧰 Funciones vs Métodos](#🧰%20Funciones%20vs%20Métodos)
-- [🧬 Herencia](#🧬%20Herencia)
+- [✨ Introducción](#introduccion)
+- [📚 Conceptos clave](#conceptos-clave)
+- [📝 ¿Cómo se crea una clase?](#como-se-crea-una-clase)
+- [🚗 Ejemplo: Clase `Auto`](#ejemplo-clase-auto)
+- [📒 Constructor principal](#constructor-principal)
+- [🧰 Funciones vs Métodos](#funciones-vs-metodos)
+- [🧬 Herencia](#herencia)
 ### ✨ Introducción
 
 > La POO es un paradigma de programación que permite modelar el mundo real mediante **objetos**.
@@ -703,7 +703,7 @@ Es una _plantilla_ para crear objetos. Define:
 ---
 ### 📝 ¿Cómo se crea una clase?
 en Kotlin usamos esta forma:
-![](Sintaxis%20para%20clases.png)
+![](../recursos/Sintaxis%20para%20clases.png)
 ```Kotlin
 class NombreDeLaClase(var atrib1: String, val atrib2: Int){
 	var atribFueraDelConstructor = 0
@@ -716,7 +716,7 @@ class NombreDeLaClase(var atrib1: String, val atrib2: Int){
 }
 ```
 #### 📊 Instanciamos la clase
-![](Sintaxis%20instanciar%20objeto.png)
+![](../recursos/Sintaxis%20instanciar%20objeto.png)
 ```Kotlin
 fun main() {
 	val miObjeto = NombreDeLaClase("Atributo1", 264)
@@ -813,7 +813,7 @@ class Perro(nombre: String) : Animal(nombre) {
     fun ladrar() = println("Guau!")
 }
 ```
-![](Ejemplo%20herencia%20UML.png)
+![](../recursos/Ejemplo%20herencia%20UML.png)
 El perro tiene **todo lo de su clase padre (Animal)** y además el método propio **`ladrar()`**
 
 ---
