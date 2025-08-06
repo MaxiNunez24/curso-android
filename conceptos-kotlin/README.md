@@ -1,18 +1,19 @@
 # Resumen general - Kotlin
-- [¿Qué es un programa?](#que-es-un-programa)
+- [¿Qué es un programa?](#qué-es-un-programa)
 - [🧑🏻‍💻Para empezar a programar](#para-empezar-a-programar)
-- [▶️​ `fun main()` - Función principal](#fun-main-funcion-principal)
-- [🖨️​ `println()` - Imprimir por terminal](#println-imprimir-por-terminal)
-- [🌱 Introducción a las Variables](#introduccion-a-las-variables)
+- [▶️​ `fun main()` - Función principal](#%EF%B8%8F-fun-main---función-principal)
+- [🖨️​ `println()` - Imprimir por terminal](#%EF%B8%8F-println---imprimir-por-terminal)
+- [🌱 Introducción a las Variables](#-introducción-a-las-variables)
 - [🔁 `var` vs `val` — Mutabilidad](#var-vs-val-mutabilidad)
-- [🧠 ¿Por qué necesitamos representar datos?](#por-que-necesitamos-representar-datos)
-- [🔢 Tipos de Datos Básicos](#tipos-de-datos-basicos)
-- [🧮 Operadores en Kotlin](#operadores-en-kotlin)
-- [🧑‍💻 `readln()` – Leer datos del usuario](#readln-leer-datos-del-usuario)
-- [🧭 Estructuras de Control](#estructuras-de-control)
-- [🛠 Funciones Personalizadas](#funciones-personalizadas)
-- [✨ Ejercicios de repaso](#ejercicios-de-repaso)
-- [👨‍🎓 Programación Orientada a Objetos (POO)](#programacion-orientada-a-objetos-poo))
+- [🧠 ¿Por qué necesitamos representar datos?](#-por-qué-necesitamos-representar-datos)
+- [🔢 Tipos de Datos Básicos](#-tipos-de-datos-básicos)
+- [🧮 Operadores en Kotlin](#-operadores-en-kotlin)
+- [🧑‍💻 `readln()` – Leer datos del usuario](#-readln--leer-datos-del-usuario)
+- [🔄 Casteo de tipos](#-casteo-de-tipos)
+- [🧭 Estructuras de Control](#-estructuras-de-control)
+- [🛠 Funciones Personalizadas](#-funciones-personalizadas)
+- [✨ Ejercicios de repaso](#-ejercicios-de-repaso)
+- [👨‍🎓 Programación Orientada a Objetos (POO)](#-programación-orientada-a-objetos-poo)
 
 ## ¿Qué es un programa?
 ![](../recursos/Programa-Algoritmo.png)
@@ -53,10 +54,10 @@ Cuando programamos, muchas veces necesitamos **guardar información** para poder
 Esa información puede ser un número, un texto, un resultado de una cuenta, entre otras cosas.
 
 Para **almacenar datos**, usamos **variables**.
-- [🧃 ¿Qué es una variable?](#que-es-una-variable)
-- [📝 ¿Cómo se crea una variable?](#como-se-crea-una-variable)
-- [🧠 ¿Para qué sirven?](#para-que-sirven)
-- [🔁 `var` vs `val` — Mutabilidad](#var-vs-val-mutabilidad)
+- [🧃 ¿Qué es una variable?](#-qué-es-una-variable)
+- [📝 ¿Cómo se crea una variable?](#-cómo-se-crea-una-variable)
+- [🧠 ¿Para qué sirven?](#-para-qué-sirven)
+- [🔁 `var` vs `val` — Mutabilidad](#-var-vs-val--mutabilidad)
 
 ### 🧃 ¿Qué es una variable?
 
@@ -144,7 +145,7 @@ En Kotlin hay **dos formas** de crear variables, y la diferencia es muy importan
 | ------------- | --------------------------- | --------------------------------- |
 | `var`         | ✅ **Sí**                    | Datos que pueden cambiar          |
 | `val`         | ❌ **No**                    | Datos que no cambian (constantes) |
-- [🎯 ¿Cuándo usar `var` y cuándo `val`?](#cuando-usar-var-y-cuando-val)
+- [🎯 ¿Cuándo usar `var` y cuándo `val`?](#-cuándo-usar-var-y-cuándo-val)
 ---
 
 ### 🧪 Veamos un ejemplo con `var` (variable que **cambia**):
@@ -208,11 +209,11 @@ Para eso usamos los **tipos de datos**, que nos permiten modelar **números, tex
 ## 🔢 Tipos de Datos Básicos
 
 En Kotlin existen varios **tipos de datos primitivos**. Vamos a ver los más usados en esta etapa:
-- [✅ Boolean (Lógico)](#boolean-logico))
-- [🔤 Char y String (Texto)](#char-y-string-texto))
-- [🔢 Números Enteros](#numeros-enteros)
-- [🔢 Números con Decimales (Punto flotante)](#numeros-con-decimales-punto-flotante))
-- [🎒 Resumen](#resumen)
+- [✅ Boolean (Lógico)](#-boolean-lógico)
+- [🔤 Char y String (Texto)](#-char-y-string-texto)
+- [🔢 Números Enteros](#-números-enteros)
+- [🔢 Números con Decimales (Punto flotante)](#-números-con-decimales-punto-flotante)
+- [🎒 Resumen](#-resumen)
 
 ---
 
@@ -307,7 +308,8 @@ fun main() {
 ### 🧮 Tip Extra: Notación científica
 
 Los números muy grandes o muy pequeños se representan así:
-$$250000 = 2.5 \times 10^{5}$$
+$$250000 = 2.5 \times 10^{5}$$  
+
 $$0.00008 = 8.0 \times 10^{-5}$$
 
 ![](../recursos/Notación%20científica.png)
@@ -330,11 +332,11 @@ $$0.00008 = 8.0 \times 10^{-5}$$
 
 Los operadores nos permiten **realizar operaciones** con los datos que guardamos en las variables.  
 Pueden ser operaciones matemáticas, comparaciones o decisiones lógicas.
-- [➕ Operadores Matemáticos](#operadores-matematicos)
-- [🧪 Operadores de Comparación](#operadores-de-comparacion)
-- [🔗 Operadores Lógicos](#operadores-logicos)
-- [🎓 Ejemplo integrador](#ejemplo-integrador)
-- [🧠 Tip: Evaluación de expresiones](#tip-evaluacion-de-expresiones)
+- [➕ Operadores Matemáticos](#-operadores-matemáticos)
+- [🧪 Operadores de Comparación](#-operadores-de-comparación)
+- [🔗 Operadores Lógicos](#-operadores-lógicos)
+- [🎓 Ejemplo integrador](#-ejemplo-integrador)
+- [🧠 Tip: Evaluación de expresiones](#-tip-evaluación-de-expresiones)
 
 ---
 ### ➕ Operadores Matemáticos
@@ -492,9 +494,9 @@ Nos permiten **tomar decisiones** o **repetir acciones**.
 
 | Tipo                                                                                             | ¿Para qué sirve?                |
 | ------------------------------------------------------------------------------------------------ | ------------------------------- |
-| [🔹 Secuencial](#secuencial)                                                                     | Ejecutar instrucciones en orden |
-| [🔸 Condicionales (`if` / `else`) y Selección (`when`)](#condicionales-if-else-y-seleccion-when) | Ejecutar según una condición    |
-| [🔁 Iteración (`while`) y Repetición (`for`)](#iteracion-while-y-repeticion-for)                 | Repetir mientras se cumpla algo |
+| [🔹 Secuencial](#-secuencial)                                                                     | Ejecutar instrucciones en orden |
+| [🔸 Condicionales (`if` / `else`) y Selección (`when`)](#-condicionales-if--else-y-selección-when) | Ejecutar según una condición    |
+| [🔁 Iteración (`while`) y Repetición (`for`)](#-iteración-while-y-repetición-for)                 | Repetir mientras se cumpla algo |
 
 ![](../recursos/Tipos%20de%20estructuras%20de%20control.png)
 
@@ -663,13 +665,14 @@ fun mostrar() {
 ---
 
 ## 👨‍🎓 Programación Orientada a Objetos (POO)
-- [✨ Introducción](#introduccion)
-- [📚 Conceptos clave](#conceptos-clave)
-- [📝 ¿Cómo se crea una clase?](#como-se-crea-una-clase)
-- [🚗 Ejemplo: Clase `Auto`](#ejemplo-clase-auto)
-- [📒 Constructor principal](#constructor-principal)
-- [🧰 Funciones vs Métodos](#funciones-vs-metodos)
-- [🧬 Herencia](#herencia)
+- [✨ Introducción](#-introducción)
+- [📚 Conceptos clave](#-conceptos-clave)
+- [📝 ¿Cómo se crea una clase?](#-cómo-se-crea-una-clase)
+- [🚗 Ejemplo: Clase `Auto`](#-ejemplo-clase-auto)
+- [📒 Constructor principal](#-constructor-principal)
+- [🧰 Funciones vs Métodos](#-funciones-vs-métodos)
+- [🧬 Herencia](#-herencia)
+- [🎓 Ejercicios de POO](#-ejercicios-de-programación-orientada-a-objetos)
 ### ✨ Introducción
 
 > La POO es un paradigma de programación que permite modelar el mundo real mediante **objetos**.
