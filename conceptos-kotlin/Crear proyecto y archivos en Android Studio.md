@@ -17,27 +17,27 @@ Esto nos va a permitir crear un proyecto para aprender Kotlin, más adelante ver
 ## 3er paso
 ### Completar los datos del proyecto
 ![](../recursos/CrearProyecto3.png)
-- [1️⃣ No Activity](#1-no-activity)
-- [2️⃣ Name](#2-name)
-- [3️⃣ Package name](#3-package-name)
-- [4️⃣ Save location](#4-save-location)
-- [5️⃣ Language](#5-language)
-- [6️⃣ Minimum SDK](#6-minimum-sdk)
-- [7️⃣ Build configuration language](#7-build-configuration-language)
+- [1️⃣ No Activity](#1---no-activity)
+- [2️⃣ Name](#2---name)
+- [3️⃣ Package name](#3---package-name)
+- [4️⃣ Save location](#4---save-location)
+- [5️⃣ Language](#5---language)
+- [6️⃣ Minimum SDK](#6---minimum-sdk)
+- [7️⃣ Build configuration language](#7---build-configuration-language)
 - [Resumen](#resumen)
-#### 1️⃣ No Activity
+#### 1 - No Activity
 
 Indica que se creará **un proyecto vacío**, sin pantallas ni actividades predefinidas, para que podamos construir la app desde cero.
 
 ---
-#### 2️⃣ Name
+#### 2 - Name
 
 🔹 **"CursoAndroid"** 
 Es el **nombre del proyecto**, usado para identificar la app en Android Studio.  
 Aparecerá en el nombre de la carpeta del proyecto y como nombre en el emulador (si no se cambia luego en `strings.xml`).
 
 ---
-#### 3️⃣ Package name
+#### 3 - Package name
 
 🔹 **"com.sunombre.cfp401.cursoandroid"**  
 Es el **nombre del paquete**, que identifica **de forma única a la app en la Play Store y en el sistema Android**.
@@ -49,7 +49,7 @@ y se utiliza también para organizar el código dentro del proyecto.
 ![](../recursos/Ejemplo%20Package%20name.png)
 
 ---
-#### 4️⃣ Save location
+#### 4 - Save location
 
 🔹 **"/home/maxi/github/CursoAndroid"**  
 Es la **ruta en tu computadora donde se guardará el proyecto**.  
@@ -57,7 +57,7 @@ Aquí se guardarán todos los archivos de código, recursos e información de co
 
 ---
 
-#### 5️⃣ Language
+#### 5 - Language
 
 🔹 **Kotlin**  
 Indica el **lenguaje de programación principal que usará la app**.  
@@ -65,7 +65,7 @@ En este caso, usarás **Kotlin** (recomendado por Google para Android desde 2019
 
 ---
 
-#### 6️⃣ Minimum SDK
+#### 6 - Minimum SDK
 
 🔹 **API 27 ("Oreo", Android 8.1)** 
 Es la **versión mínima de Android que los dispositivos deben tener para instalar y ejecutar tu app**.  
@@ -84,7 +84,7 @@ La idea es buscar el **balance** entre la mayor cantidad de usuarios posibles y 
 ![](../recursos/Mayor%20version%20vs%20menos%20dispositivos.png)
 
 ---
-#### 7️⃣ Build configuration language
+#### 7 - Build configuration language
 
 🔹 **Kotlin DSL (build.gradle.kts)** - Recommended
 Indica el **lenguaje de configuración que se usará para los archivos de construcción del proyecto (build.gradle)**.
