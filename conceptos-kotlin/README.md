@@ -625,7 +625,7 @@ fun mostrar() {
 
 **Enunciado:** A partir de la edad ingresada, imprimir si es mayor o menor de edad.
 
-**Pista:** `if (edad >= 18)`
+**Pista:** si la `edad` es `mayor o igual` a 18...
 
 ---
 
@@ -659,7 +659,8 @@ fun mostrar() {
 
 #### 6. Promedio de notas
 
-**Enunciado:** Ingresar 3 notas (pueden tener decimales), calcular el promedio y mostrarlo
+**Enunciado:** Ingresar 3 notas (pueden tener decimales), calcular el promedio y mostrarlo  
+
 **Pista:** recordá que el promedio es la suma de los valores dividido la cantidad de valores
 
 ---
