@@ -911,3 +911,248 @@ class ClaseHija : ClasePadre() {
     
 - Y creá al menos 1 objeto con ella en `main()`
 ---
+
+## 🧩 Clasificación general de clases en Kotlin
+
+| Tipo de clase      | Finalidad principal                                                        |
+| ------------------ | -------------------------------------------------------------------------- |
+| `class`            | Definir objetos comunes con atributos y comportamientos                    |
+| `abstract class`   | Crear estructuras base con métodos y propiedades incompletas o comunes     |
+| `interface`        | Definir contratos (qué se puede hacer) sin implementación obligatoria      |
+| `data class`       | Representar datos con generación automática de funciones como `toString()` |
+| `enum class`       | Enumerar valores constantes con posibles propiedades y métodos             |
+| `object`           | Crear un singleton (una única instancia)                                   |
+| `companion object` | Crear miembros "estáticos" dentro de una clase                             |
+| `nested class`     | Clases anidadas sin acceso a la clase exterior                             |
+| `inner class`      | Clases anidadas con acceso a la clase exterior                             |
+| `sealed class`     | Modelar jerarquías cerradas (tipos restringidos) para usar con `when`      |
+
+---
+
+## 1. `class`: Clases comunes
+
+🔸 **Uso:** Modelar objetos con estado y comportamiento.
+
+```kotlin
+class Persona(val nombre: String, var edad: Int) {
+    fun saludar() = println("Hola, soy $nombre y tengo $edad años")
+}
+```
+
+### 🧪 Ejercicio:
+
+* Crear una clase `Auto` con marca, modelo y año. Agregar un método `mostrarInfo()`.
+
+---
+
+## 2. `abstract class`: Clases abstractas
+
+🔸 **Uso:** Clase base que no se puede instanciar, con métodos comunes y abstractos.
+
+```kotlin
+abstract class Animal {
+    abstract fun hacerSonido()
+    fun respirar() = println("Respirando...")
+}
+
+class Perro : Animal() {
+    override fun hacerSonido() = println("Guau guau")
+}
+```
+
+### 🧪 Ejercicio:
+
+* Crear una clase abstracta `Instrumento` con método abstracto `tocar()`.
+* Implementar dos clases: `Guitarra` y `Bateria`.
+
+---
+
+## 3. `interface`: Interfaces
+
+🔸 **Uso:** Definir contratos sin estado (o con propiedades `val`) y múltiples implementaciones.
+
+```kotlin
+interface Reproducible {
+    fun reproducir()
+}
+
+class Cancion : Reproducible {
+    override fun reproducir() = println("Reproduciendo canción...")
+}
+```
+
+✔️ Una clase puede implementar **más de una interfaz**.
+
+### 🧪 Ejercicio:
+
+* Crear una interfaz `Volador` con método `volar()`.
+* Implementar `Volador` en las clases `Pajaro` y `Avion`.
+
+---
+
+## 4. `data class`: Clases de datos
+
+🔸 **Uso:** Representar estructuras que solo contienen datos.
+
+```kotlin
+data class Producto(val nombre: String, val precio: Double)
+```
+
+✔️ Automáticamente implementa `equals()`, `hashCode()`, `toString()`, `copy()` y `componentN()`.
+
+### 🧪 Ejercicio:
+
+* Crear una `data class` llamada `Libro` con `titulo`, `autor` y `añoPublicacion`.
+* Probar el método `copy()` para hacer una copia cambiando el año.
+
+---
+
+## 5. `enum class`: Enumeraciones
+
+🔸 **Uso:** Definir un conjunto fijo de constantes, con comportamiento opcional.
+
+```kotlin
+enum class Dia {
+    LUNES, MARTES, MIERCOLES
+}
+```
+
+✔️ Pueden tener **propiedades y métodos**:
+
+```kotlin
+enum class Prioridad(val nivel: Int) {
+    BAJA(1), MEDIA(2), ALTA(3);
+    
+    fun esCritica() = this == ALTA
+}
+```
+
+### 🧪 Ejercicio:
+
+* Crear un enum `ColorSemaforo` con valores `ROJO`, `AMARILLO`, `VERDE`.
+* Agregar una función `accion()` que devuelva un texto según el color.
+
+---
+
+## 6. `object`: Singleton
+
+🔸 **Uso:** Instancia única. Muy útil para controladores o servicios.
+
+```kotlin
+object Logger {
+    fun log(msg: String) = println("Log: $msg")
+}
+```
+
+✔️ No necesita ser instanciado, se usa directamente: `Logger.log("Iniciando...")`
+
+### 🧪 Ejercicio:
+
+* Crear un objeto `Contador` con una variable `total` y métodos `incrementar()` y `mostrar()`.
+
+---
+
+## 7. `companion object`: Miembros estáticos
+
+🔸 **Uso:** Asociar métodos/constantes a la clase, no a la instancia.
+
+```kotlin
+class Usuario(val nombre: String) {
+    companion object {
+        const val SALUDO = "Hola"
+        fun crearInvitado() = Usuario("Invitado")
+    }
+}
+```
+
+✔️ Se accede con `Usuario.SALUDO` o `Usuario.crearInvitado()`
+
+### 🧪 Ejercicio:
+
+* Crear clase `Cuenta` con companion que tenga un método `generarNumeroCuenta()`.
+
+---
+
+## 8. `nested class`: Clases anidadas
+
+🔸 **Uso:** Clase dentro de otra que **NO puede acceder a sus miembros externos**.
+
+```kotlin
+class Computadora(val marca: String) {
+    class Procesador(val modelo: String) {
+        fun infoComputadora(computadora: Computadora): String {
+            return "Procesador $modelo de ${computadora.marca}"
+        }
+    }
+}
+```
+
+✔️ No necesita una instancia de la clase externa para instanciarse.
+
+### 🧪 Ejercicio:
+
+* Crear una clase `Universidad` con una clase anidada `Curso`. Mostrar cómo acceder al nombre de la universidad desde el curso.
+
+---
+
+## 9. `inner class`: Clases internas
+
+🔸 **Uso:** Clase dentro de otra que **puede acceder a sus miembros externos**.
+
+```kotlin
+class Computadora(val marca: String) {
+    inner class Procesador(val modelo: String) {
+        fun info() = "Procesador $modelo de $marca"
+    }
+}
+```
+
+✔️ Necesita una instancia de la clase externa para instanciarse.
+
+### 🧪 Ejercicio:
+
+* Crear clase `Empresa` con una clase interna `Empleado`. Mostrar cómo acceder al nombre de la empresa desde el empleado.
+
+---
+
+## 10. `sealed class`: Clases selladas
+
+🔸 **Uso:** Modelar jerarquías de clases limitadas. Muy útil para representar estados en `when` sin necesidad de `else`.
+
+```kotlin
+sealed class Resultado
+data class Exito(val datos: String) : Resultado()
+data class Error(val mensaje: String) : Resultado()
+object Cargando : Resultado()
+```
+
+```kotlin
+fun manejarResultado(r: Resultado) = when (r) {
+    is Exito -> println("Datos: ${r.datos}")
+    is Error -> println("Error: ${r.mensaje}")
+    Cargando -> println("Cargando...")
+}
+```
+
+### 🧪 Ejercicio:
+
+* Modelar una clase sellada `Operacion` con `Suma`, `Resta` y `Multiplicacion`, y procesarla con un `when`.
+
+---
+
+## 📌 Diferencias clave entre tipos
+
+| Tipo               | Puede instanciarse | Tiene estado    | Herencia      | Uso principal                               |
+| ------------------ | ------------------ | --------------- | ------------- | ------------------------------------------- |
+| `class`            | ✔️                 | ✔️              | ✔️            | Objetos comunes                             |
+| `data class`       | ✔️                 | ✔️              | ❌             | Almacenar datos                             |
+| `abstract class`   | ❌ (directamente)   | ✔️              | ✔️ (solo 1)   | Base para clases hijas                      |
+| `interface`        | ❌                  | ❌ (por defecto) | ✔️ (múltiple) | Definir contratos                           |
+| `sealed class`     | ❌ (directamente)   | ✔️              | ✔️ (limitada) | Modelado de estados limitados               |
+| `enum class`       | ✔️                 | ✔️              | ❌             | Conjunto de constantes                      |
+| `object`           | ✔️ (automático)    | ✔️              | ❌             | Singleton                                   |
+| `companion object` | ✔️ (internamente)  | ✔️              | ❌             | Lógica compartida/estática dentro de clases |
+| `nested class`     | ✔️                 | ✔️              | ✔️            | Subclase sin acceso a la clase externa      |
+| `inner class`      | ✔️                 | ✔️              | ✔️            | Subclase con acceso a la clase externa      |
+
+---
