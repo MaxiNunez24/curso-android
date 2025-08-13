@@ -1,7 +1,7 @@
 package com.MaxiNunez24.curso_android.POO
 
 class Gato(nombre: String, raza: String, edad: Int) : Animal(nombre, raza, edad) {
-    fun arañar(){
+   fun arañar(){
         if(energia < 10) println("$nombre está muy cansado para arañarte... ¡Te salvaste!")
         else{
             energia -= 5
@@ -13,7 +13,7 @@ class Gato(nombre: String, raza: String, edad: Int) : Animal(nombre, raza, edad)
         maullar()
     }
 
-    fun maullar(){
+   private fun maullar(){
         if(energia < 5) println("$nombre está muy cansado para maullar...")
         else {
             energia -= 5

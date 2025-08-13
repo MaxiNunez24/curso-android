@@ -6,7 +6,7 @@ class Perro(nombre: String, raza: String, edad: Int) : Animal(nombre, raza, edad
         ladrar()
     }
 
-    fun ladrar(){
+   fun ladrar(){
         if(energia < 5) println("$nombre está demasiado cansado para ladrar... ¡¡¡AL FINN!!!")
         else{
             energia -= 5

@@ -62,7 +62,7 @@ fun ejemplo(){
     también se puede retornar un valor del tipo especificado
     después de los paréntesis:
 
-    fun nombreDeFuncion(): Tipo { código }
+   private fun mainnombreDeFuncion(): Tipo { código }
 
     para retornar un valor (que puede ser una variable o
     calculado en la misma línea) se utiliza la palabra
@@ -94,14 +94,14 @@ fun saludoParametros(nombre: String, apellido: String): String {
     Se le llama "firma" de una función al nombre, parámetros y su
     valor de retorno. Ej:
 
-    fun calcularCredito(monto: Double, interes: Double): Double
+   private fun maincalcularCredito(monto: Double, interes: Double): Double
 
 
     Y se le llaman parámetros formales a los parámetros de la firma
     y argumentos o parámetros reales a los valores que se le pasa a
     la función cuando esta es llamada. Por ej:
 
-    fun saludoFormal(nombre: String, firma: String): String
+   private fun mainsaludoFormal(nombre: String, firma: String): String
                          ↑            ↑
     parámetros formales: ↑            ↑
 

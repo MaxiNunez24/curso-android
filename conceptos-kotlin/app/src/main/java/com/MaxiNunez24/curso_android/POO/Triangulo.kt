@@ -11,13 +11,13 @@ class Triangulo {
     var lado3 = 0
 
     // Métodos -> Funciones
-    fun inicializar(lado1: Int, lado2: Int, lado3: Int) {
+   fun inicializar(lado1: Int, lado2: Int, lado3: Int) {
         this.lado1 = lado1
         this.lado2 = lado2
         this.lado3 = lado3
     }
 
-    fun inicializarPorTeclado() {
+   fun inicializarPorTeclado() {
         println("Ingrese el lado 1:")
         this.lado1 = readln().toInt()
         println("Ingrese el lado 2:")
@@ -26,11 +26,11 @@ class Triangulo {
         this.lado3 = readln().toInt()
     }
 
-    fun imprimir() {
+   fun imprimir() {
         println("Triángulo con lados: $lado1 $lado2 $lado3 ")
     }
 
-    fun ladoMayor(){
+   fun ladoMayor(){
         if(lado1 > lado2){
             if(lado1 > lado3) println("El lado 1 es el mayor")
             else println("El lado 3 es el mayor")

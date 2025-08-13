@@ -4,11 +4,11 @@ class Alumno(val nombre: String, val curso: String){
     var promedio = 0.0f
     val notas = mutableListOf<Int>()
 
-    fun rendirExamen(nota: Int){
+   fun rendirExamen(nota: Int){
         notas.add(nota)
     }
 
-    fun promedio(): Float {
+   fun promedio(): Float {
         /* var promedio = 0
         var suma = 0
         var cantidad = 0

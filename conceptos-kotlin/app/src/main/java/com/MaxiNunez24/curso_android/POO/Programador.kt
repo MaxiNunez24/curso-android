@@ -6,19 +6,19 @@ class Programador {
     var lenguaje = ""
 
     // Métodos -> Funciones
-    fun inicializar(nombre: String, lenguaje: String) {
+   fun inicializar(nombre: String, lenguaje: String) {
         this.nombre = nombre
         this.lenguaje = lenguaje
     }
 
-    fun inicializarPorTeclado(){
+   fun inicializarPorTeclado(){
         println("Ingrese el nombre del programador:")
         this.nombre = readln()
         println("Ingrese el lenguaje del programador:")
         this.lenguaje = readln()
     }
 
-    fun presentarse(): String = "Hola soy $nombre y programo en $lenguaje"
+   fun presentarse(): String = "Hola soy $nombre y programo en $lenguaje"
 }
 
 fun main() {

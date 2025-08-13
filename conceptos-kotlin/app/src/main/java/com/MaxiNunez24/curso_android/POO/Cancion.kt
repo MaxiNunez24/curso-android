@@ -3,17 +3,17 @@ package com.MaxiNunez24.curso_android.POO
 class Cancion(val titulo: String, val artista: String, val duracion: Float, val genero: String) {
     var letra = ""
 
-    fun promt() : String = "$artista - $titulo  (duración: $duracion mins)"
+   fun promt() : String = "$artista - $titulo  (duración: $duracion mins)"
 
-    fun reproducir(){
+   fun reproducir(){
         println("Reproduciendo ${promt()}")
     }
 
-    fun pausar (){
+   fun pausar (){
         println("Pausando ${promt()}")
     }
 
-    fun reanudar(){
+   fun reanudar(){
         println("Reanudando ${promt()}")
     }
 }

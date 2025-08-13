@@ -1,6 +1,6 @@
 package com.MaxiNunez24.curso_android.Ejercicios
 
-fun ejercicioArray1(){
+private fun ejercicioArray1(){
     val miArreglo : Array<Int> = arrayOf(1,2,3,4,5)
 
     // Una manera
@@ -12,7 +12,7 @@ fun ejercicioArray1(){
     // SON EQUIVALENTES!
 }
 
-fun ejercicioArray2(){
+private fun ejercicioArray2(){
     val misNumeros : Array<Int> = arrayOf(1,2,3,4,5,6,7,8)
     var sumaParcial : Int = 0
     for(num in misNumeros){
@@ -21,13 +21,13 @@ fun ejercicioArray2(){
     println(sumaParcial)
 }
 
-fun ejercicioArray2_0(){
+private fun ejercicioArray2_0(){
     val misNumeros : Array<Int> = arrayOf(1,2,3,4,5,6,7,8)
     var sumaTotal : Int = misNumeros.sum()
     println("La suma total es: $sumaTotal")
 }
 
-fun ejercicioArray3(){
+private fun ejercicioArray3(){
     val numeros : Array<Int> =
         arrayOf(5,2,3,24,55,1,35,-3,33,3,24,12,4)
     var minimo : Int = Int.MAX_VALUE
@@ -41,7 +41,7 @@ fun ejercicioArray3(){
     println("El máximo número es: $maximo")
 }
 
-fun ejercicioArray3_0(){
+private fun ejercicioArray3_0(){
     val numeros : Array<Int> =
         arrayOf(5,2,3,24,55,1,35,-3,33,3,24,12,4)
     var minimo : Int = numeros.min()
@@ -63,7 +63,7 @@ hay en un array de enteros.
  * 3.2. Entonces incremento el cont de pares
  * 4. Imprimo el contador
  */
-fun ejercicioArray4(numeros : Array<Int>) {
+private fun ejercicioArray4(numeros : Array<Int>) {
     var contador: Int = 0
     val pares : ArrayList<Int> = arrayListOf()
     for(num in numeros) {
@@ -87,14 +87,14 @@ fun ejercicioArray4(numeros : Array<Int>) {
  * 3.1. arreglo[indice] = elem.toUpperCase()
  * 4. imprimir el arreglo
  */
-fun ejercicioArray5(colores : ArrayList<String>){
+private fun ejercicioArray5(colores : ArrayList<String>){
     for((indice, color) in colores.withIndex()){
         if(color == "rojo") colores[indice] = color.uppercase()
     }
     println(colores)
 }
 
-fun ejercicioArray6(gradosCelsius : Array<Double>) : List<Double> {
+private fun ejercicioArray6(gradosCelsius : Array<Double>) : List<Double> {
     val gradosFahrenheit : List<Double> = gradosCelsius.map{(it * 9/5) + 32}
     return gradosFahrenheit
 }

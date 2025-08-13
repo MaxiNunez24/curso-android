@@ -12,14 +12,14 @@ abstract class Animal(val nombre: String, val raza: String, var edad: Int) : Cua
 
     abstract fun emitirSonido()
 
-    fun comer(){
+   fun comer(){
         if(energia < 100) {
             energia = energia + 10
             println("$nombre está comiendo... Yum!")
         } else println("$nombre está lleno..")
     }
 
-    fun dormir(){
+   fun dormir(){
         if(energia == 100) println("$nombre no está cansado aún!")
         else {
             energia = 100
@@ -27,7 +27,7 @@ abstract class Animal(val nombre: String, val raza: String, var edad: Int) : Cua
         }
     }
 
-    fun tomarAgua(){
+   fun tomarAgua(){
         if(energia < 100){
             energia += 5
             println("$nombre está tomando agua... Surp")
@@ -43,17 +43,12 @@ abstract class Animal(val nombre: String, val raza: String, var edad: Int) : Cua
         }
     }
 
-    fun imprimir(){
+   fun imprimir(){
         println("Nombre: $nombre")
         println("Raza: $raza")
         println("Edad: $edad años")
         println("Energía restante: $energia%")
     }
-
-    override fun prueba(){
-
-    }
-
 }
 
 
@@ -76,7 +71,7 @@ abstract class Animal(val nombre: String, val raza: String, var edad: Int) : Cua
 open class Animal(val nombre: String, val raza: String, var edad: Int) {
     var energia = 100
 
-    fun comer(){
+   private fun maincomer(){
         if(energia < 100) {
             energia = energia + 10
             println("$nombre está comiendo... Yum!")

@@ -2,11 +2,11 @@ package com.MaxiNunez24.curso_android.Ejercicios
 
 import kotlin.random.Random
 
-fun ejercicio1(){
+private fun ejercicio1(){
     for(i in 1..10) print("$i ")
 }
 
-fun ejercicio2(){
+private fun ejercicio2(){
     var i: Int = 15
     while(i <= 15){
         print("$i ")
@@ -14,7 +14,7 @@ fun ejercicio2(){
     }
 }
 
-fun ejercicio3() {
+private fun ejercicio3() {
     var i: Int = 1
     do{
         print("¡Hola! ")
@@ -22,7 +22,7 @@ fun ejercicio3() {
     } while(i <= 3)
 }
 
-fun ejercicio4(){
+private fun ejercicio4(){
     val arr : Array<String> =
         arrayOf("Pepe","Carla","Pedro","Pablo","María","Juan","Lucas")
     // 7 elementos (size)
@@ -33,7 +33,7 @@ fun ejercicio4(){
     }
 }
 
-fun ejercicio5(){
+private fun ejercicio5(){
     val numeros : Array<Int> = arrayOf(1,2,3,4,5,6) // Array(6){it + 1} <- Otra forma de crear Arrays
     val totalParcial : MutableList<Int> = mutableListOf(0)
 
@@ -46,7 +46,7 @@ fun ejercicio5(){
     println(totalParcial)
 }
 
-fun ejercicio6(){
+private fun ejercicio6(){
     for(i in 1..5){
         print("Tabla de $i: ")
         for(j in 1..10){
@@ -56,7 +56,7 @@ fun ejercicio6(){
     }
 }
 
-fun ejercicio7(){
+private fun ejercicio7(){
     var opcion : Int
     do{
         println("Ingrese una opción:")
@@ -73,12 +73,12 @@ fun ejercicio7(){
     }while(opcion != 0)
 }
 
-fun ejercicio8(miString: String){
+private fun ejercicio8(miString: String){
     for(i in miString.length-1 downTo 0)
         print(miString[i])
 }
 
-fun ejercicio9(){
+private fun ejercicio9(){
     val adivinalo : Int = Random.nextInt(1,50) //25
     println("Adivine el número entre 1 y 50 -> ")
     var input : Int = readln().toInt() // 10
@@ -90,7 +90,7 @@ fun ejercicio9(){
     println("¡¡¡Felicitaciones ganaste!!!")
 }
 
-fun ejercicio10(){
+private fun ejercicio10(){
     var contador : Int = 10
     while(contador >= 0){
         println(contador)

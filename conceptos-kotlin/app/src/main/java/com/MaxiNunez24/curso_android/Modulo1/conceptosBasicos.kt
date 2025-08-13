@@ -1,19 +1,19 @@
 package com.MaxiNunez24.curso_android.Modulo1
 
-fun ejercicio1() {
+private fun ejercicio1() {
     println("Use the val keyword when the value doesn't change.")
     println("Use the var keyword when the value can change.")
     println("When you define a function, you define the parameters that can be passed to it.")
     println("When you call a function, you pass arguments for the parameters.")
 }
 
-fun ejercicio2(){
+private fun ejercicio2(){
     fun main() {
         println("New chat message from a friend")
     }
 }
 
-fun ejercicio3(){
+private fun ejercicio3(){
     fun main() {
         var discountPercentage: Int = 0
         var offer: String = ""
@@ -25,21 +25,21 @@ fun ejercicio3(){
     }
 }
 
-fun ejercicio4(){
+private fun ejercicio4(){
     val numberOfAdults = 20
     val numberOfKids = 30
     val total = numberOfAdults + numberOfKids
     println("The total party size is: $total")
 }
 
-fun ejercicio5(){
+private fun ejercicio5(){
     val baseSalary = 5000
     val bonusAmount = 1000
     val totalSalary = baseSalary + bonusAmount
     println("Congratulations for your bonus! You will receive a total of $totalSalary (additional bonus).")
 }
 
-fun ejercicio6(){
+private fun ejercicio6(){
     val firstNumber = 10
     val secondNumber = 5
     val result = firstNumber + secondNumber
@@ -52,12 +52,12 @@ fun potencia(base: Int, exponente: Int) : Int {
     return result
 }
 
-fun ejercicio7() {
-    fun add(num1: Int, num2: Int) : Int {
+private fun ejercicio7() {
+   fun add(num1: Int, num2: Int) : Int {
         return num1 + num2
     }
 
-    fun substract(num1: Int, num2: Int) : Int{
+   fun substract(num1: Int, num2: Int) : Int{
         return num1 - num2
     }
 
@@ -72,14 +72,14 @@ fun ejercicio7() {
     println("$firstNumber - $thirdNumber = $anotherResult")
 }
 
-fun ejercicio8(){
+private fun ejercicio8(){
     val operatingSystem = "Chrome OS"
     val emailId = "sample@gmail.com"
 
     println(displayAlertMessage(operatingSystem, emailId))
 }
 
-fun ejercicio81(){
+private fun ejercicio81(){
     val firstUserEmailId = "user_one@gmail.com"
 
     // The following line of code assumes that you named your parameter as emailId. 
@@ -106,7 +106,7 @@ fun displayAlertMessage(os: String = "Unknown OS", email: String): String =
 
 fun main(){
 
-    fun pepe(dato: Int, otroDato: String): Int{
+   fun pepe(dato: Int, otroDato: String): Int{
         println(otroDato)
         return dato + 5
     }
