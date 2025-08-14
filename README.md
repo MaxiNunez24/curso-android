@@ -5,6 +5,7 @@ Bienvenidos al curso de Desarrollo de Aplicaciones Móviles. En este curso apren
 
 ## Índices
 - [🧑🏻‍💻 Conceptos básicos de Kotlin](./conceptos-kotlin/README.md)
+- [Guía de ejercicios y análisis de Programación Imperativa](./conceptos-kotlin/GuiaEjerciciosImperativo.md)
 
 ## Descripción del Curso
 
