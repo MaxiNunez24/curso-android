@@ -23,7 +23,7 @@ Por eso estos ejercicios están pensados para practicar **imperatividad y modula
 * Pide al usuario cuántas bochas de helado quiere y el precio por bocha.
 * Si pide más de 3 bochas, aplica un 10% de descuento.
 * Mostrar el total a pagar.
-* **Módulos sugeridos**: leerDatos(), calcularDescuento(), mostrarResultado().
+* **Módulos sugeridos**: leerCantBochas(), leerPrecio(), aplicarDescuento(), mostrarImporte().
 
 ---
 
@@ -96,31 +96,41 @@ Por eso estos ejercicios están pensados para practicar **imperatividad y modula
 
 **Análisis**
 
-* **Entrada**: cantidad de bochas (`Int`), precio por bocha (`Double`).
-* **Proceso**: si bochas > 3 → descuento del 10%.
-* **Salida**: total a pagar (`Double`).
+* **Entrada**: Pedir cantidad de bochas (`Int`), pedir precio por bocha (`Float`).
+* **Proceso**: si bochas > 3 → descuento del 10% (`precio * 0.9f`).
+* **Salida**: total a pagar (`Float`).
 
 **Pseudocódigo**
 
 ```
-funcion leerDatos():
-    leer cantidad
-    leer precio
-    retornar cantidad, precio
+función ejercicio1Heladero(){
 
-funcion calcularTotal(cantidad, precio):
-    total = cantidad * precio
-    si cantidad > 3:
-        total = total - total * 0.10
-    retornar total
-
-funcion mostrarResultado(total):
-    imprimir total
-
-principal:
-    cantidad, precio = leerDatos()
-    total = calcularTotal(cantidad, precio)
-    mostrarResultado(total)
+    función leerCantBochas(): Entero
+        imprimir mensaje
+        leer cantidad
+        retornar cantidad
+    
+    función leerPrecio(): Decimal
+        imprimir mensaje
+        leer precio
+        retornar precio
+    
+    función aplicarDescuento(cantidad, precio): ??
+        total = cantidad * precio
+        si cantidad > 3:
+            total = total - total * 0.10
+        retornar total
+    
+    funcion mostrarImporte(importe):
+        imprimir importe
+    
+    
+    cantBochas = leerCantBochas()
+    precio = leerPrecio()
+    total = aplicarDescuento(cantBochas, precio)
+    mostrarImporte(total)
+    
+}
 ```
 
 ---
@@ -336,28 +346,38 @@ Las resoluciones a continuación son una posible solución a los problemas, esto
 ### Resolución 1: La calculadora del heladero
 
 ```kotlin
-fun ejercicioHeladero() {
-    val (bochas, precio) = leerDatosHelado()
-    val total = calcularTotalHelado(bochas, precio)
-    mostrarResultadoHelado(total)
-}
+private fun ejercicio1Heladero(){ // La calculadora del heladero
 
-fun leerDatosHelado(): Pair<Int, Double> {
-    print("Ingrese cantidad de bochas: ")
-    val bochas = readln().toInt()
-    print("Ingrese precio por bocha: ")
-    val precio = readln().toDouble()
-    return bochas to precio
-}
+    // Pedir al usuario la cantidad de bochas de helado
+    fun leerCantBochas(): Int {
+        println("Ingrese la cantidad de bochas de helado:")
+        return readln().toInt()
+    }
 
-fun calcularTotalHelado(bochas: Int, precio: Double): Double {
-    var total = bochas * precio
-    if (bochas > 3) total -= total * 0.10
-    return total
-}
+    // Pedir al usuario el precio por bocha
+    fun leerPrecio(): Float{
+        println("Ingrese el precio por bocha:")
+        return readln().toFloat()
+    }
 
-fun mostrarResultadoHelado(total: Double) {
-    println("Total a pagar: $${"%.2f".format(total)}")
+    // Calcular el importe total a pagar
+    fun aplicarDescuento(cantidad: Int, precio: Float): Float{
+        var total = cantidad * precio
+        // Decidir si aplicar descuento del 10% (cantBochas > 3)
+        if(cantidad > 3) total = total * 0.9f
+        return total
+    }
+
+    // Mostrar el importe total a pagar
+    fun mostrarImporte(importe: Float){
+        println("El importe total es: $importe")
+    }
+
+    // Llamado a los módulos
+    val cantBochas = leerCantBochas()
+    val precioPorBocha = leerPrecio()
+    val importeTotal = aplicarDescuento(cantBochas, precioPorBocha)
+    mostrarImporte(importeTotal)
 }
 ```
 
