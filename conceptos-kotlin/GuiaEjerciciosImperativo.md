@@ -321,7 +321,7 @@ principal:
 ---
 
 ## 💻 Índice de resoluciones en Kotlin
-
+Las resoluciones a continuación son una posible solución a los problemas, esto quiere decir que no son las únicas. Así que intenten resolver los ejercicios por su cuenta antes de leerlas. Lo importante es que devuelvan los mismos resultados.
 1. [La calculadora del heladero](#resolución-1-la-calculadora-del-heladero)
 2. [El viaje en colectivo](#resolución-2-el-viaje-en-colectivo)
 3. [El dado tramposo](#resolución-3-el-dado-tramposo)
