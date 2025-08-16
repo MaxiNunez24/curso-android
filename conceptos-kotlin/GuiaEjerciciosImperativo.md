@@ -38,7 +38,7 @@ Por eso estos ejercicios están pensados para practicar **imperatividad y modula
 
 ### Ej. 3) El dado tramposo
 
-* Simular que se lanza un dado 10 veces.
+* Simular que se lanza un dado 10 veces. (utilizar `Random.nextInt(1,7)`)
 * Contar cuántas veces salió un número par y cuántas un impar.
 * **Módulos sugeridos**: lanzarDado(), esPar(numero), mostrarEstadisticas().
 
@@ -176,28 +176,43 @@ función ejercicio2Colectivo(){
 
 **Análisis**
 
-* **Entrada**: cantidad de lanzamientos (`Int`).
-* **Proceso**: generar números entre 1 y 6, pero con probabilidad mayor para el 6.
-* **Salida**: lista de resultados y cuántas veces salió el 6.
+* **Entrada**: `for` para simular los 10 lanzamientos
+* **Proceso**: generar números entre 1 y 6 con `Random.nextInt(1,7)`
+* **Salida**: lista de cantidad de pares y cantidad de impares (opcional con los números que salieron)
 
 **Pseudocódigo**
 
 ```
-funcion lanzarDado():
-    generar aleatorio entre 1 y 10
-    si numero >= 8:
-        retornar 6
-    sino:
-        retornar aleatorio entre 1 y 5
-
-funcion jugar(cantidad):
-    contador6 = 0
-    repetir cantidad veces:
-        resultado = lanzarDado()
-        mostrar resultado
-        si resultado == 6:
-            contador6++
-    mostrar contador6
+función ejercicio3Dado(){
+    
+    función lanzarDado():
+        generar número aleatorio entre 1 y 6
+        retornar número aleatorio
+    
+    función esPar(numero):
+        si numero es divisible por 2:
+            retornar verdadero
+        sino
+            retornar falso
+        
+    función mostrarEstadisticas(pares, impares):
+        imprimir la cantidad de pares (opcional los números)
+        imprimir la cantidad de impares (opcional los números)
+    
+    
+    pares = 0 (o lista vacía)
+    impares = 0 (o lista vacía)
+    
+    repetir 10:
+        tirada = lanzarDado()
+        si esPar(tirada):
+            agregar a pares
+        sino:
+            agregar a impares
+            
+    mostrarEstadisticas(pares, impares)
+                    
+}
 ```
 
 ---
@@ -420,29 +435,37 @@ private fun ejercicio2Colectivo(){ // El viaje en colectivo
 ### Resolución 3: El dado tramposo
 
 ```kotlin
-fun ejercicioDadoTramposo() {
-    val cantidad = leerCantidadTiros()
-    val resultados = tirarDadoTramposo(cantidad)
-    mostrarResultadosDado(resultados)
-}
+private fun ejercicio3Dado() {
 
-fun leerCantidadTiros(): Int {
-    print("Ingrese cantidad de lanzamientos: ")
-    return readln().toInt()
-}
-
-fun tirarDadoTramposo(cantidad: Int): List<Int> {
-    val lista = mutableListOf<Int>()
-    repeat(cantidad) {
-        // import kotlin.random.Random <- al comienzo del archivo
-        val numero = if (Random.nextDouble() < 0.2) 6 else Random.nextInt(1, 7)
-        lista.add(numero)
+    // Simular un lanzamiento de dado
+    fun lanzarDado(): Int {
+        return Random.nextInt(1, 7)
     }
-    return lista
-}
 
-fun mostrarResultadosDado(resultados: List<Int>) {
-    println("Resultados: ${resultados.joinToString(", ")}")
+    // Determinar si el número es par
+    fun esPar(numero: Int): Boolean {
+        return numero % 2 == 0
+    }
+
+    // Imprimir la cantidad de pares e impares y los números que salieron
+    fun mostrarEstadisticas(pares: List<Int>, impares: List<Int>) {
+        println("Salieron ${pares.size} números pares y ${impares.size} números impares")
+        println("Los pares que salieron son: $pares")
+        println("Los impares que salieron son: $impares")
+    }
+
+
+    val pares: MutableList<Int> = mutableListOf()
+    val impares: MutableList<Int> = mutableListOf()
+
+    for (i in 1..10) {
+        var tirada = lanzarDado()
+        if (esPar(tirada)) pares.add(tirada)
+        else impares.add(tirada)
+    }
+
+    mostrarEstadisticas(pares, impares)
+
 }
 ```
 

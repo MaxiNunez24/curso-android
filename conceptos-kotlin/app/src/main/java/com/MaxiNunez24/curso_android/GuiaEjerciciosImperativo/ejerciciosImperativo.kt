@@ -1,3 +1,7 @@
+import com.MaxiNunez24.curso_android.Sintaxis.mutableList
+import kotlin.random.Random
+import kotlin.random.nextInt
+
 private fun ejercicio1Heladero(){ // La calculadora del heladero
 
     // Pedir al usuario la cantidad de bochas de helado
@@ -56,7 +60,39 @@ private fun ejercicio2Colectivo(){ // El viaje en colectivo
 
 }
 
+private fun ejercicio3Dado() {
+
+    // Simular un lanzamiento de dado
+    fun lanzarDado(): Int {
+        return Random.nextInt(1, 7)
+    }
+
+    // Determinar si el número es par
+    fun esPar(numero: Int): Boolean {
+        return numero % 2 == 0
+    }
+
+    // Imprimir la cantidad de pares e impares y los números que salieron
+    fun mostrarEstadisticas(pares: List<Int>, impares: List<Int>) {
+        println("Salieron ${pares.size} números pares y ${impares.size} números impares")
+        println("Los pares que salieron son: $pares")
+        println("Los impares que salieron son: $impares")
+    }
+
+
+    val pares: MutableList<Int> = mutableListOf()
+    val impares: MutableList<Int> = mutableListOf()
+
+    for (i in 1..10) {
+        var tirada = lanzarDado()
+        if (esPar(tirada)) pares.add(tirada)
+        else impares.add(tirada)
+    }
+
+    mostrarEstadisticas(pares, impares)
+
+}
+
 fun main(){
-    ejercicio2Colectivo()
-    ejercicio2Colectivo()
+
 }
