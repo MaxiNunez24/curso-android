@@ -121,7 +121,7 @@ función ejercicio1Heladero(){
             total = total - total * 0.10
         retornar total
     
-    funcion mostrarImporte(importe):
+    función mostrarImporte(importe):
         imprimir importe
     
     
@@ -139,31 +139,35 @@ función ejercicio1Heladero(){
 
 **Análisis**
 
-* **Entrada**: distancia en km (`Double`), costo por km (`Double`).
-* **Proceso**: si la distancia > 50 km → aplicar 15% de descuento.
-* **Salida**: costo total (`Double`).
+* **Entrada**: distancia en km (`Float`), precio por km (`Float`).
+* **Proceso**: si la distancia > 50 km → precio = $100, sino -> precio = $120  
+* **Salida**: costo total (`Float`).
 
 **Pseudocódigo**
 
 ```
-funcion leerDatos():
-    leer distancia
-    leer precioKm
-    retornar distancia, precioKm
+función ejercicio2Colectivo(){
+    
+    función obtenerDistancia():
+        imprimir mensaje
+        leer distancia
+        retornar distancia
+    
+    función calcularCosto(distancia): 
+        costo = 120
+        si distancia > 50:
+            costo = 100
+        retornar costo * distancia
+    
+    función imprimirTicket(distancia, costo):
+        imprimir costo para tal distancia
+    
+    
+    km = obtenerDistancia()
+    costo = calcularCosto(km)
+    imprimirTicket(km, costo)
 
-funcion calcularCosto(distancia, precioKm):
-    costo = distancia * precioKm
-    si distancia > 50:
-        costo = costo - costo * 0.15
-    retornar costo
-
-funcion mostrarCosto(costo):
-    imprimir costo
-
-principal:
-    distancia, precioKm = leerDatos()
-    costo = calcularCosto(distancia, precioKm)
-    mostrarCosto(costo)
+}
 ```
 
 ---
@@ -386,28 +390,28 @@ private fun ejercicio1Heladero(){ // La calculadora del heladero
 ### Resolución 2: El viaje en colectivo
 
 ```kotlin
-fun ejercicioColectivo() {
-    val (pasaje, cantidad) = leerDatosColectivo()
-    val total = calcularTotalColectivo(pasaje, cantidad)
-    mostrarResultadoColectivo(total)
-}
+private fun ejercicio2Colectivo(){ // El viaje en colectivo
 
-fun leerDatosColectivo(): Pair<Double, Int> {
-    print("Ingrese precio del pasaje: ")
-    val precio = readln().toDouble()
-    print("Ingrese cantidad de boletos: ")
-    val cantidad = readln().toInt()
-    return precio to cantidad
-}
+    // Pedir la cantidad de kilometros a recorrer
+    fun obtenerDistancia(): Float {
+        println("Ingrese la cantidad de km a recorrer:")
+        return readln().toFloat()
+    }
+    // Calcular costo por km ($120 o $100 según km)
+    fun calcularCosto(km: Float): Float{
+        var precio = 120f
+        if(km > 50) precio = 100f
+        return km * precio
+    }
+    //Imprimir ticket
+    fun imprimirTicket(km: Float, importe: Float){
+        println("El importe total a pagar para recorrer $km km es de $$importe")
+    }
+    // Llamar a los módulos
+    val km = obtenerDistancia()
+    val costo = calcularCosto(km)
+    imprimirTicket(km, costo)
 
-fun calcularTotalColectivo(precio: Double, cantidad: Int): Double {
-    var total = precio * cantidad
-    if (cantidad >= 10) total *= 0.9
-    return total
-}
-
-fun mostrarResultadoColectivo(total: Double) {
-    println("Total a pagar: $${"%.2f".format(total)}")
 }
 ```
 

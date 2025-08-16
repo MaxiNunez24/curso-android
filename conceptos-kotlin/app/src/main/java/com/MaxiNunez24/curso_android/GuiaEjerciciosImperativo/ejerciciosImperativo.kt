@@ -32,6 +32,31 @@ private fun ejercicio1Heladero(){ // La calculadora del heladero
     mostrarImporte(importeTotal)
 }
 
+private fun ejercicio2Colectivo(){ // El viaje en colectivo
+
+    // Pedir la cantidad de kilometros a recorrer
+    fun obtenerDistancia(): Float {
+        println("Ingrese la cantidad de km a recorrer:")
+        return readln().toFloat()
+    }
+    // Calcular costo por km ($120 o $100 según km)
+    fun calcularCosto(km: Float): Float{
+        var precio = 120f
+        if(km > 50) precio = 100f
+        return km * precio
+    }
+    //Imprimir ticket
+    fun imprimirTicket(km: Float, importe: Float){
+        println("El importe total a pagar para recorrer $km km es de $$importe")
+    }
+    // Llamar a los módulos
+    val km = obtenerDistancia()
+    val costo = calcularCosto(km)
+    imprimirTicket(km, costo)
+
+}
+
 fun main(){
-    ejercicio1Heladero()
+    ejercicio2Colectivo()
+    ejercicio2Colectivo()
 }
