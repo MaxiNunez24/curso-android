@@ -47,9 +47,9 @@ Por eso estos ejercicios están pensados para practicar **imperatividad y modula
 ### Ej. 4) El cajero del videojuego
 
 * Un jugador empieza con 1000 monedas.
-* Puede “comprar” 3 tipos de objetos con precios distintos (elegidos por el profe o por el alumno).
+* Puede “comprar” 3 tipos de objetos con precios distintos (elegidos por ustedes).
 * Repetir hasta que se quede sin monedas o decida salir.
-* **Módulos sugeridos**: mostrarMenu(), comprarObjeto(opcion), mostrarSaldo().
+* **Módulos sugeridos**: mostrarMenu(), puedeComprar()
 
 ---
 
@@ -221,27 +221,57 @@ función ejercicio3Dado(){
 
 **Análisis**
 
-* **Entrada**: precio de un ítem (`Double`), cantidad de monedas (`Int`).
-* **Proceso**: calcular si el jugador puede comprar el ítem.
-* **Salida**: mensaje de compra exitosa o insuficiente.
+* **Mostrar**: productos y sus precios
+* **Entrada**: item a comprar (`Int`)
+* **Proceso**: ver que se haya ingresado una opción válida, calcular si el jugador puede comprar el ítem, o si desea salir.
+* **Salida**: mensaje de compra exitosa o insuficiente, o mensaje de salida.
 
 **Pseudocódigo**
 
 ```
-funcion leerDatos():
-    leer precio
-    leer monedas
-    retornar precio, monedas
+función ejercicio4Videojuego() {
 
-funcion verificarCompra(precio, monedas):
-    si monedas >= precio:
-        mostrar "Compra exitosa"
-    sino:
-        mostrar "Monedas insuficientes"
+    función mostrarMenu:
+        imprimir un menú con nombre y precio de los productos
 
-principal:
-    precio, monedas = leerDatos()
-    verificarCompra(precio, monedas)
+    función puedeComprar(opcion, monedas, precios):
+        retornar monedas >= precios[opcion - 1]
+
+    // Un jugador empieza con 1000 monedas
+    val monedasIniciales = 1000
+    var monedas = monedasIniciales
+
+    // Variable auxiliar para salir del bucle
+    var salir = false
+
+    // Productos y Precios que tengan acceso por índices
+    productos = ("ESPADA", "POCIÓN DE VIDA", "ARMADURA")
+    precios = (20, 15, 30)
+
+    // Repetir hasta que se quede sin monedas o decida salir
+    Hacer:
+        mostrarMenu()
+        leer la opción ingresada
+
+        Si ingreso una opción válida:
+            Si decide salir se termina el programa:
+                Si se queda sin monedas se termina el programa:
+                    Si puede comprar lo que quiere:
+                        imprimir mensaje de compra exitosa
+                        imprimir cantidad de monedas restantes
+                    Sino:
+                        imprimir mensaje de monedas insuficientes
+                Sino:
+                    imprimir mensaje de monedas insuficientes para todos los productos
+                    salir = true
+            Sino:
+                Imprimir mensaje de despedida
+                salir = true
+        Sino: 
+            Imprimir opción inválida
+    Mientras (!salir)
+
+}
 ```
 
 ---
@@ -474,25 +504,76 @@ private fun ejercicio3Dado() {
 ### Resolución 4: El cajero del videojuego
 
 ```kotlin
-fun ejercicioCajero() {
-    var saldo = leerSaldoInicial()
-    saldo = realizarCompra(saldo)
-    mostrarSaldoFinal(saldo)
-}
+private fun ejercicio4Videojuego() {
 
-fun leerSaldoInicial(): Int {
-    print("Ingrese saldo inicial de monedas: ")
-    return readln().toInt()
-}
+    fun mostrarMenu() {
+        print(
+            """
+-----------------------------------------------------
+|      ¡Bienvenido a la tienda!                     |
+|                                                   |
+|      ¿Qué desea comprar hoy joven aventurero?     |
+|     ___________________________________           |       
+|     |  1* ESPADA: 20 monedas          |           |
+|     |  2* POCIÓN DE VIDA: 15 monedas  |           |
+|     |  3: ARMADURA: 30 monedas        |           |
+|     |_________________________________|           |
+|      0* Para salir.                               |   
+|                                                   |
+|      Ingrese el número de la opción deseada:      |
+|___________________________________________________|
+"""
+        )
+    }
 
-fun realizarCompra(saldo: Int): Int {
-    print("Ingrese costo del objeto: ")
-    val costo = readln().toInt()
-    return if (saldo >= costo) saldo - costo else saldo
-}
+    fun puedeComprar(opcion: Int, monedas: Int, precios: Array<Int>): Boolean {
+        return (monedas >= precios[opcion - 1])
+    }
 
-fun mostrarSaldoFinal(saldo: Int) {
-    println("Saldo final: $saldo monedas")
+    // Un jugador empieza con 1000 monedas
+    val monedasIniciales = 1000
+    var monedas = monedasIniciales
+
+    // Variable booleana auxiliar para salir del bucle
+    var salir = false
+
+    // Arreglo de productos y sus precios para facilitar el acceso por índices
+    val productos = arrayOf("ESPADA", "POCIÓN DE VIDA", "ARMADURA")
+    val precios = arrayOf(20, 15, 30)
+
+    // Repetir hasta que se quede sin monedas o decida salir
+    do {
+        mostrarMenu()
+        // Se lee la opción ingresada por el usuario
+        val opcion = readln().toInt()
+
+        // Se ingreso una opción válida?
+        if (opcion in 0..3) {
+            // Si decide salir se termina el programa
+            if (opcion != 0) {
+                // Si se queda sin monedas se termina el programa
+                if (monedas > 15) {
+                    // Puede comprar lo que quiere?
+                    if (puedeComprar(opcion, monedas, precios)) {
+                        println("Ha comprado ${productos[opcion - 1]} por ${precios[opcion - 1]} monedas!")
+                        monedas = monedas - precios[opcion - 1]
+                        println("Le quedan $monedas monedas.")
+                    } else {
+                        println("No tiene las monedas suficientes para comprar la ${productos[opcion - 1]}!")
+                    }
+                } else {
+                    println("¡No tiene monedas suficientes para comprar los objetos, vuelva mañana!")
+                    salir = true
+                }
+            } else {
+                println("¡Gracias por su visita!")
+                salir = true
+            }
+        } else {
+            println("¡Opción inválida!")
+        }
+
+    } while (!salir)
 }
 ```
 

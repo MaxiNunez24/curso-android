@@ -2,7 +2,7 @@ import com.MaxiNunez24.curso_android.Sintaxis.mutableList
 import kotlin.random.Random
 import kotlin.random.nextInt
 
-private fun ejercicio1Heladero(){ // La calculadora del heladero
+private fun ejercicio1Heladero() { // La calculadora del heladero
 
     // Pedir al usuario la cantidad de bochas de helado
     fun leerCantBochas(): Int {
@@ -11,21 +11,21 @@ private fun ejercicio1Heladero(){ // La calculadora del heladero
     }
 
     // Pedir al usuario el precio por bocha
-    fun leerPrecio(): Float{
+    fun leerPrecio(): Float {
         println("Ingrese el precio por bocha:")
         return readln().toFloat()
     }
 
     // Calcular el importe total a pagar
-    fun aplicarDescuento(cantidad: Int, precio: Float): Float{
+    fun aplicarDescuento(cantidad: Int, precio: Float): Float {
         var total = cantidad * precio
         // Decidir si aplicar descuento del 10% (cantBochas > 3)
-        if(cantidad > 3) total = total * 0.9f
+        if (cantidad > 3) total = total * 0.9f
         return total
     }
 
     // Mostrar el importe total a pagar
-    fun mostrarImporte(importe: Float){
+    fun mostrarImporte(importe: Float) {
         println("El importe total es: $importe")
     }
 
@@ -36,21 +36,23 @@ private fun ejercicio1Heladero(){ // La calculadora del heladero
     mostrarImporte(importeTotal)
 }
 
-private fun ejercicio2Colectivo(){ // El viaje en colectivo
+private fun ejercicio2Colectivo() { // El viaje en colectivo
 
     // Pedir la cantidad de kilometros a recorrer
     fun obtenerDistancia(): Float {
         println("Ingrese la cantidad de km a recorrer:")
         return readln().toFloat()
     }
+
     // Calcular costo por km ($120 o $100 según km)
-    fun calcularCosto(km: Float): Float{
+    fun calcularCosto(km: Float): Float {
         var precio = 120f
-        if(km > 50) precio = 100f
+        if (km > 50) precio = 100f
         return km * precio
     }
+
     //Imprimir ticket
-    fun imprimirTicket(km: Float, importe: Float){
+    fun imprimirTicket(km: Float, importe: Float) {
         println("El importe total a pagar para recorrer $km km es de $$importe")
     }
     // Llamar a los módulos
@@ -93,6 +95,79 @@ private fun ejercicio3Dado() {
 
 }
 
-fun main(){
+private fun ejercicio4Videojuego() {
 
+    fun mostrarMenu() {
+        print(
+            """
+-----------------------------------------------------
+|      ¡Bienvenido a la tienda!                     |
+|                                                   |
+|      ¿Qué desea comprar hoy joven aventurero?     |
+|     ___________________________________           |       
+|     |  1* ESPADA: 20 monedas          |           |
+|     |  2* POCIÓN DE VIDA: 15 monedas  |           |
+|     |  3: ARMADURA: 30 monedas        |           |
+|     |_________________________________|           |
+|      0* Para salir.                               |   
+|                                                   |
+|      Ingrese el número de la opción deseada:      |
+|___________________________________________________|
+"""
+        )
+    }
+
+    fun puedeComprar(opcion: Int, monedas: Int, precios: Array<Int>): Boolean {
+        return (monedas >= precios[opcion - 1])
+    }
+
+    // Un jugador empieza con 1000 monedas
+    val monedasIniciales = 1000
+    var monedas = monedasIniciales
+
+    // Variable booleana auxiliar para salir del bucle
+    var salir = false
+
+    // Arreglo de productos y sus precios para facilitar el acceso por índices
+    val productos = arrayOf("ESPADA", "POCIÓN DE VIDA", "ARMADURA")
+    val precios = arrayOf(20, 15, 30)
+
+    // Repetir hasta que se quede sin monedas o decida salir
+    do {
+        mostrarMenu()
+        // Se lee la opción ingresada por el usuario
+        val opcion = readln().toInt()
+
+        // Se ingreso una opción válida?
+        if (opcion in 0..3) {
+            // Si decide salir se termina el programa
+            if (opcion != 0) {
+                // Si se queda sin monedas se termina el programa
+                if (monedas > 15) {
+                    // Puede comprar lo que quiere?
+                    if (puedeComprar(opcion, monedas, precios)) {
+                        println("Ha comprado ${productos[opcion - 1]} por ${precios[opcion - 1]} monedas!")
+                        monedas = monedas - precios[opcion - 1]
+                        println("Le quedan $monedas monedas.")
+                    } else {
+                        println("No tiene las monedas suficientes para comprar la ${productos[opcion - 1]}!")
+                    }
+                } else {
+                    println("¡No tiene monedas suficientes para comprar los objetos, vuelva mañana!")
+                    salir = true
+                }
+            } else {
+                println("¡Gracias por su visita!")
+                salir = true
+            }
+        } else {
+            println("¡Opción inválida!")
+        }
+
+    } while (!salir)
+
+}
+
+fun main() {
+    ejercicio4Videojuego()
 }
