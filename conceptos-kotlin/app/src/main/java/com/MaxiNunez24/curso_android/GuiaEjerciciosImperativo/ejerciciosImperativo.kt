@@ -86,7 +86,7 @@ private fun ejercicio3Dado() {
     val impares: MutableList<Int> = mutableListOf()
 
     for (i in 1..10) {
-        var tirada = lanzarDado()
+        val tirada = lanzarDado()
         if (esPar(tirada)) pares.add(tirada)
         else impares.add(tirada)
     }
@@ -113,7 +113,7 @@ private fun ejercicio4Videojuego() {
 |                                                   |
 |      Ingrese el número de la opción deseada:      |
 |___________________________________________________|
-"""
+""".trimIndent()
         )
     }
 
@@ -168,6 +168,55 @@ private fun ejercicio4Videojuego() {
 
 }
 
+private fun ejercicio5Tortugas() {
+    // Simular un lanzamiento de dado
+    fun lanzarDado(): Int {
+        return Random.nextInt(1, 7)
+    }
+
+    fun mostrarPosiciones(posicion1: Int, posicion2: Int) {
+        // Mostrar quién ganó
+        if(posicion1 >= 20){
+            println("______________________")
+            println("¡¡La tortuga 1 ganó!!")
+            println("|* ||  |")
+        } else if(posicion2 >= 20){
+            println("______________________")
+            println("¡¡La tortuga 2 ganó!!")
+            println("|  || *|")
+        }
+        // Dibujar pista y posiciones de las tortugas
+        println("======== FINISH")
+        for (i in 19 downTo 0) {
+            if (i == posicion1) print("|* |")
+            else print("|  |")
+            if (i == posicion2) print("| *| $i")
+            else print("|  | $i")
+            println()
+        }
+        println("|__||__| START")
+    }
+
+    // Variable auxilar para saber si hay ganador
+    var hayGanador = false
+
+    // Posiciones de las tortugas
+    var tortuga1 = 0
+    var tortuga2 = 0
+
+    // Mientras no haya ganador, se lanzan los dados
+    do {
+        tortuga1 = tortuga1 + lanzarDado()
+        if (tortuga1 >= 20) hayGanador = true
+
+        tortuga2 = tortuga2 + lanzarDado()
+        if (!hayGanador && tortuga2 >= 20) hayGanador = true
+
+        mostrarPosiciones(tortuga1, tortuga2)
+
+    } while (!hayGanador)
+}
+
 fun main() {
-    ejercicio4Videojuego()
+    
 }

@@ -58,7 +58,7 @@ Por eso estos ejercicios están pensados para practicar **imperatividad y modula
 * Dos tortugas avanzan por turnos tirando un dado (1 a 6 pasos).
 * La primera que llegue o supere 20 pasos gana.
 * Mostrar paso a paso el avance de cada una.
-* **Módulos sugeridos**: tirarDado(), avanzarTortuga(), mostrarPosiciones(), verificarGanador().
+* **Módulos sugeridos**: lanzarDado(), mostrarPosiciones()
 
 ---
 
@@ -280,34 +280,43 @@ función ejercicio4Videojuego() {
 
 **Análisis**
 
-* **Entrada**: nombres y velocidades de 2 tortugas (`String`, `Double`).
-* **Proceso**: simular avance en una carrera de 10 metros, avanzan según su velocidad por turno.
-* **Salida**: tortuga ganadora.
+* **Entrada**: ninguna
+* **Proceso**: simular una carrera de 20 metros por turnos de dos tortugas donde al tirar un dado indique cuánto se van a mover en ese turno (`Int`)
+* **Salida**: posición de las tortugas actualmente o tortuga ganadora.
 
 **Pseudocódigo**
 
 ```
-funcion leerDatos():
-    leer nombre1, vel1
-    leer nombre2, vel2
-    retornar nombre1, vel1, nombre2, vel2
+función ejercicio5Tortugas() {
+    
+    función lanzarDado:
+        Simular un lanzamiento de dado
 
-funcion simularCarrera(nombre1, vel1, nombre2, vel2):
-    dist1 = 0
-    dist2 = 0
-    mientras dist1 < 10 y dist2 < 10:
-        dist1 += vel1
-        dist2 += vel2
-    si dist1 >= 10 y dist2 >= 10:
-        mostrar "Empate"
-    sino si dist1 >= 10:
-        mostrar nombre1
-    sino:
-        mostrar nombre2
+    función mostrarPosiciones(posicion1, posicion2):
+        Mostrar quién ganó
+        Dibujar pista y posiciones de las tortugas
 
-principal:
-    datos = leerDatos()
-    simularCarrera(datos)
+    // Variable auxilar para saber si hay ganador
+    hayGanador = false
+
+    // Posiciones de las tortugas
+    tortuga1 = 0
+    tortuga2 = 0
+
+    // Mientras no haya ganador, se lanzan los dados
+    Hacer:
+        tortuga1 = tortuga1 + lanzarDado()
+        Si ganó la tortuga1:
+            hayGanador = true
+
+        tortuga2 = tortuga2 + lanzarDado()
+        Si !hayGanador y ganó la tortuga2:
+            hayGanador = true
+
+        mostrarPosiciones(tortuga1, tortuga2)
+
+    Mientras (!hayGanador)
+}
 ```
 
 ---
@@ -522,7 +531,7 @@ private fun ejercicio4Videojuego() {
 |                                                   |
 |      Ingrese el número de la opción deseada:      |
 |___________________________________________________|
-"""
+""".trimIndent()
         )
     }
 
@@ -582,30 +591,53 @@ private fun ejercicio4Videojuego() {
 ### Resolución 5: Carrera de tortugas
 
 ```kotlin
-fun ejercicioTortugas() {
-    val (distancia1, distancia2) = leerDistanciasTortugas()
-    val ganador = determinarGanador(distancia1, distancia2)
-    mostrarGanador(ganador)
-}
-
-fun leerDistanciasTortugas(): Pair<Int, Int> {
-    print("Distancia tortuga 1: ")
-    val d1 = readln().toInt()
-    print("Distancia tortuga 2: ")
-    val d2 = readln().toInt()
-    return d1 to d2
-}
-
-fun determinarGanador(d1: Int, d2: Int): String {
-    return when {
-        d1 > d2 -> "Tortuga 1"
-        d2 > d1 -> "Tortuga 2"
-        else -> "Empate"
+private fun ejercicio5Tortugas() {
+    // Simular un lanzamiento de dado
+    fun lanzarDado(): Int {
+        return Random.nextInt(1, 7)
     }
-}
 
-fun mostrarGanador(ganador: String) {
-    println("Ganador: $ganador")
+    fun mostrarPosiciones(posicion1: Int, posicion2: Int) {
+        // Mostrar quién ganó
+        if(posicion1 >= 20){
+            println("______________________")
+            println("¡¡La tortuga 1 ganó!!")
+            println("|* ||  |")
+        } else if(posicion2 >= 20){
+            println("______________________")
+            println("¡¡La tortuga 2 ganó!!")
+            println("|  || *|")
+        }
+        // Dibujar pista y posiciones de las tortugas
+        println("======== FINISH")
+        for (i in 19 downTo 0) {
+            if (i == posicion1) print("|* |")
+            else print("|  |")
+            if (i == posicion2) print("| *| $i")
+            else print("|  | $i")
+            println()
+        }
+        println("|__||__| START")
+    }
+
+    // Variable auxilar para saber si hay ganador
+    var hayGanador = false
+
+    // Posiciones de las tortugas
+    var tortuga1 = 0
+    var tortuga2 = 0
+
+    // Mientras no haya ganador, se lanzan los dados
+    do {
+        tortuga1 = tortuga1 + lanzarDado()
+        if (tortuga1 >= 20) hayGanador = true
+
+        tortuga2 = tortuga2 + lanzarDado()
+        if (!hayGanador && tortuga2 >= 20) hayGanador = true
+
+        mostrarPosiciones(tortuga1, tortuga2)
+
+    } while (!hayGanador)
 }
 ```
 
