@@ -327,29 +327,41 @@ función ejercicio5Tortugas() {
 
 * **Entrada**: número secreto (generado aleatoriamente), intentos del usuario.
 * **Proceso**: indicar si el número ingresado es mayor o menor que el secreto.
-* **Salida**: mensaje de acierto o agotamiento de intentos.
+* **Salida**: mensaje de acierto
 
 **Pseudocódigo**
 
 ```
-funcion generarSecreto():
-    retornar aleatorio entre 1 y 100
+función ejercicio6NumeroSecreto() {
 
-funcion jugar():
-    secreto = generarSecreto()
-    intentos = 0
-    repetir mientras intentos < 5:
-        leer numero
-        intentos++
-        si numero == secreto:
-            mostrar "Adivinaste"
-            salir
-        sino si numero < secreto:
-            mostrar "Mayor"
-        sino:
-            mostrar "Menor"
-    si no adivinó:
-        mostrar "Perdiste"
+    función generarNumeroSecreto():
+        retornar generar un número entre 1 y 100 aleatoriamente
+
+    función leerIntento():
+        imprimir mensaje para que el usuario ingrese un número
+        retornar leer número
+    
+
+    función verificarIntento(intento, solucion):
+        retornar Si intento es mayor a solucion:
+            imprimir que el intento es mayor al número secreto
+            falso
+        Sino si intento es menor a solucion:
+            imprimir que el intento es menor al número secreto
+            falso
+        Sino: 
+            imprimir que adivinó
+            verdadero
+
+    numeroSecreto = generarNumeroSecreto()
+
+    // Variable auxiliar para salir del bucle
+    haGanado = falso
+
+    Hacer:
+        haGanado = verificarIntento(leerIntento(), numeroSecreto)
+    Mientras (!haGanado)
+}
 ```
 
 ---
@@ -646,14 +658,38 @@ private fun ejercicio5Tortugas() {
 ### Resolución 6: El acertijo del número secreto
 
 ```kotlin
-fun ejercicioNumeroSecreto() {
-    val secreto = (1..10).random()
-    var intento: Int
+fun ejercicio6NumeroSecreto() {
+
+    fun generarNumeroSecreto(): Int {
+        return Random.nextInt(1, 100)
+    }
+
+    fun leerIntento(): Int {
+        println("Intente adivinar el número secreto (entre 1 y 100):")
+        return readln().toInt()
+    }
+
+    fun verificarIntento(intento: Int, solucion: Int): Boolean {
+        return if (intento > solucion) {
+            println("El número secreto es menor al número ingresado")
+            false
+        } else if (intento < solucion) {
+            println("El número secreto es mayor al número ingresado")
+            false
+        } else {
+            println("¡Adivinaste! El número secreto era $solucion")
+            true
+        }
+    }
+
+    val numeroSecreto = generarNumeroSecreto()
+
+    // Variable auxiliar para salir del bucle
+    var haGanado = false
+
     do {
-        print("Adivina el número (1-10): ")
-        intento = readln().toInt()
-    } while (intento != secreto)
-    println("¡Correcto! El número era $secreto.")
+        haGanado = verificarIntento(leerIntento(), numeroSecreto)
+    } while (!haGanado)
 }
 ```
 

@@ -176,11 +176,11 @@ private fun ejercicio5Tortugas() {
 
     fun mostrarPosiciones(posicion1: Int, posicion2: Int) {
         // Mostrar quién ganó
-        if(posicion1 >= 20){
+        if (posicion1 >= 20) {
             println("______________________")
             println("¡¡La tortuga 1 ganó!!")
             println("|* ||  |")
-        } else if(posicion2 >= 20){
+        } else if (posicion2 >= 20) {
             println("______________________")
             println("¡¡La tortuga 2 ganó!!")
             println("|  || *|")
@@ -217,6 +217,40 @@ private fun ejercicio5Tortugas() {
     } while (!hayGanador)
 }
 
+fun ejercicio6NumeroSecreto() {
+
+    fun generarNumeroSecreto(): Int {
+        return Random.nextInt(1, 100)
+    }
+
+    fun leerIntento(): Int {
+        println("Intente adivinar el número secreto (entre 1 y 100):")
+        return readln().toInt()
+    }
+
+    fun verificarIntento(intento: Int, solucion: Int): Boolean {
+        return if (intento > solucion) {
+            println("El número secreto es menor al número ingresado")
+            false
+        } else if (intento < solucion) {
+            println("El número secreto es mayor al número ingresado")
+            false
+        } else {
+            println("¡Adivinaste! El número secreto era $solucion")
+            true
+        }
+    }
+
+    val numeroSecreto = generarNumeroSecreto()
+
+    // Variable auxiliar para salir del bucle
+    var haGanado = false
+
+    do {
+        haGanado = verificarIntento(leerIntento(), numeroSecreto)
+    } while (!haGanado)
+}
+
 fun main() {
-    
+    ejercicio6NumeroSecreto()
 }
