@@ -209,15 +209,17 @@ private fun ejercicio5Tortugas() {
         tortuga1 = tortuga1 + lanzarDado()
         if (tortuga1 >= 20) hayGanador = true
 
-        tortuga2 = tortuga2 + lanzarDado()
-        if (!hayGanador && tortuga2 >= 20) hayGanador = true
+        if (!hayGanador){
+            tortuga2 = tortuga2 + lanzarDado()
+            if(tortuga2 >= 20) hayGanador = true
+        }
 
         mostrarPosiciones(tortuga1, tortuga2)
 
     } while (!hayGanador)
 }
 
-fun ejercicio6NumeroSecreto() {
+private fun ejercicio6NumeroSecreto() {
 
     fun generarNumeroSecreto(): Int {
         return Random.nextInt(1, 100)
@@ -251,6 +253,75 @@ fun ejercicio6NumeroSecreto() {
     } while (!haGanado)
 }
 
+private fun ejercicio7CajaRegistradora() {
+
+    fun leerProducto(productos: MutableMap<String, Float>): Boolean {
+        println("Ingrese el nombre del producto (finaliza con 'fin'):")
+        val nombre = readln()
+        return if (nombre != "fin") {
+            println("Ingrese el precio del producto:")
+            val precio = readln().toFloat()
+            productos.put(nombre, precio)
+            false
+        } else true
+    }
+
+    fun aplicarDescuento(total: Float): Float {
+        println("Ingrese el monto mínimo requerido para aplicar el descuento:")
+        val montoMinimo = readln().toFloat()
+        return if (total >= montoMinimo) {
+            println("Se aplicó un descuento del 25% al monto total de $$total")
+            total * 0.75f
+        }
+        else total
+    }
+
+    fun sumarPrecios(productos: MutableMap<String, Float>): Float {
+        return aplicarDescuento(productos.values.sum())
+    }
+
+    // Colección para almacenar los productos
+    val productos = mutableMapOf<String, Float>()
+
+    // Variable auxiliar para salir del bucle
+    var salir = false
+
+    while (!salir) {
+        salir = leerProducto(productos)
+    }
+    if (productos.isNotEmpty()) println("El monto total a abonar es de: $${sumarPrecios(productos)}")
+}
+
 fun main() {
-    ejercicio6NumeroSecreto()
+    var opcion: Int
+    do {
+        println(
+            """
+            _______________________________
+            | === Menú de ejercicios ===  |
+            | 1. Calculadora del heladero |
+            | 2. Viaje en colectivo       |
+            | 3. Dado tramposo            |
+            | 4. Cajero del videojuego    |
+            | 5. Carrera de tortugas      |
+            | 6. Número secreto           |
+            | 7. Caja registradora        |
+            | 0. Salir                    |
+            |_____________________________|
+            """.trimIndent()
+        )
+        print("Opción: ")
+        opcion = readln().toInt()
+        when (opcion) {
+            1 -> ejercicio1Heladero()
+            2 -> ejercicio2Colectivo()
+            3 -> ejercicio3Dado()
+            4 -> ejercicio4Videojuego()
+            5 -> ejercicio5Tortugas()
+            6 -> ejercicio6NumeroSecreto()
+            7 -> ejercicio7CajaRegistradora()
+            0 -> println("Saliendo...")
+            else -> println("Opción inválida")
+        }
+    } while (opcion != 0)
 }

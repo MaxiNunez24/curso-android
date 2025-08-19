@@ -73,10 +73,15 @@ Por eso estos ejercicios están pensados para practicar **imperatividad y modula
 
 ### Ej. 7) La caja registradora
 
-* Permitir ingresar productos con nombre y precio hasta que se ingrese “fin”.
+* Permitir ingresar productos con nombre y precio hasta que se ingrese “fin” (no se ingresan repetidos).
 * Calcular total y cantidad de productos.
-* Si el total supera cierto monto, aplicar descuento.
-* **Módulos sugeridos**: leerProducto(), sumarPrecio(), aplicarDescuento(), mostrarTicket().
+* Si el total supera cierto monto (definido por ustedes), aplicar descuento del 25%.
+* **Módulos sugeridos**: leerProducto(), sumarPrecios(), aplicarDescuento().
+
+---
+
+### Ej. 8) Menú único para los ejercicios  
+* Realice un menú único desde el cual pueda acceder y ejecutar todos los ejercicios previos resueltos.
 
 ---
 
@@ -370,32 +375,48 @@ función ejercicio6NumeroSecreto() {
 
 **Análisis**
 
-* **Entrada**: precios de productos hasta que el usuario ingrese 0.
-* **Proceso**: sumar precios y calcular IVA (21%).
-* **Salida**: total final con IVA.
+* **Entrada**: nombre (`String`) y precio (`Float`) de productos hasta que el usuario ingrese el nombre `"fin"`. Y monto a superar para aplicar descuento del 25%.
+* **Proceso**: sumar precios y la cantidad de productos.
+* **Salida**: decidir en base al monto si aplicar el descuento o no y mostrar el total a pagar.
 
 **Pseudocódigo**
 
 ```
-funcion leerPrecios():
-    total = 0
-    repetir:
-        leer precio
-        si precio != 0:
-            total += precio
-    hasta que precio == 0
-    retornar total
+función ejercicio7CajaRegistradora() {
 
-funcion calcularIVA(total):
-    retornar total * 1.21
+    función leerProducto(productos): ??
+        imprimir que ingrese el nombre y con qué finaliza
+        leer nombre
+        retornar Si nombre es distinto de "fin":
+            imprimir que ingrese el precio del producto
+            leer precio
+            agregar producto
+            falso
+        Sino verdadero
+    
+    función aplicarDescuento(total): ??
+        imprimir que ingrese el monto mínimo para aplicar descuento
+        leer monto mínimo
+        retornar Si el total llega al monto mínimo
+            imprimir que se aplicó un descuento del 25% al monto total
+            total * 0.75f
+        Sino total
 
-funcion mostrarTotal(total):
-    imprimir total
+    función sumarPrecios(productos): ??
+        retornar aplicarDescuento(la suma de los precios de los productos)
 
-principal:
-    total = leerPrecios()
-    totalIVA = calcularIVA(total)
-    mostrarTotal(totalIVA)
+    // Colección para almacenar los productos
+    productos = ??? 
+    
+    // Variable auxiliar para salir del bucle
+    salir = falso
+
+    Mientras (!salir):
+        salir = leerProducto(productos)
+    
+    Si hay productos:
+        imprimir el monto total a abonar (con o sin descuento)
+}
 ```
 
 ---
@@ -698,29 +719,43 @@ fun ejercicio6NumeroSecreto() {
 ### Resolución 7: La caja registradora
 
 ```kotlin
-fun ejercicioCajaRegistradora() {
-    val precios = leerPrecios()
-    val total = calcularTotalCaja(precios)
-    mostrarTotalCaja(total)
-}
+private fun ejercicio7CajaRegistradora() {
 
-fun leerPrecios(): List<Double> {
-    val lista = mutableListOf<Double>()
-    var precio: Double
-    do {
-        print("Ingrese precio (0 para terminar): ")
-        precio = readln().toDouble()
-        if (precio > 0) lista.add(precio)
-    } while (precio > 0)
-    return lista
-}
+    fun leerProducto(productos: MutableMap<String, Float>): Boolean {
+        println("Ingrese el nombre del producto (finaliza con 'fin'):")
+        val nombre = readln()
+        return if (nombre != "fin") {
+            println("Ingrese el precio del producto:")
+            val precio = readln().toFloat()
+            productos.put(nombre, precio)
+            false
+        } else true
+    }
 
-fun calcularTotalCaja(precios: List<Double>): Double {
-    return precios.sum()
-}
+    fun aplicarDescuento(total: Float): Float {
+        println("Ingrese el monto mínimo requerido para aplicar el descuento:")
+        val montoMinimo = readln().toFloat()
+        return if (total >= montoMinimo) {
+            println("Se aplicó un descuento del 25% al monto total de $$total")
+            total * 0.75f
+        }
+        else total
+    }
 
-fun mostrarTotalCaja(total: Double) {
-    println("Total de ventas: $${"%.2f".format(total)}")
+    fun sumarPrecios(productos: MutableMap<String, Float>): Float {
+        return aplicarDescuento(productos.values.sum())
+    }
+
+    // Colección para almacenar los productos
+    val productos = mutableMapOf<String, Float>()
+
+    // Variable auxiliar para salir del bucle
+    var salir = false
+
+    while (!salir) {
+        salir = leerProducto(productos)
+    }
+    if (productos.isNotEmpty()) println("El monto total a abonar es de: $${sumarPrecios(productos)}")
 }
 ```
 
