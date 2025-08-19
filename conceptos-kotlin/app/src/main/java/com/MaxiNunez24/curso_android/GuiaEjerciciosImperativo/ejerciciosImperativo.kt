@@ -204,8 +204,10 @@ private fun ejercicio5Tortugas() {
     var tortuga1 = 0
     var tortuga2 = 0
 
+    mostrarPosiciones(tortuga1, tortuga2)
     // Mientras no haya ganador, se lanzan los dados
-    do {
+    do {5
+
         tortuga1 = tortuga1 + lanzarDado()
         if (tortuga1 >= 20) hayGanador = true
 
@@ -215,7 +217,6 @@ private fun ejercicio5Tortugas() {
         }
 
         mostrarPosiciones(tortuga1, tortuga2)
-
     } while (!hayGanador)
 }
 
