@@ -14,6 +14,7 @@
 - [🛠 Funciones Personalizadas](#-funciones-personalizadas)
 - [✨ Ejercicios de repaso](#-ejercicios-de-repaso)
 - [👨‍🎓 Programación Orientada a Objetos (POO)](#-programación-orientada-a-objetos-poo)
+- [🧩 Clasificación general de clases en Kotlin](#-clasificación-general-de-clases-en-kotlin)
 
 ## ¿Qué es un programa?
 ![](../recursos/Programa-Algoritmo.png)
@@ -1147,14 +1148,14 @@ fun manejarResultado(r: Resultado) = when (r) {
 | Tipo               | Puede instanciarse | Tiene estado    | Herencia      | Uso principal                               |
 | ------------------ | ------------------ | --------------- | ------------- | ------------------------------------------- |
 | `class`            | ✔️                 | ✔️              | ✔️            | Objetos comunes                             |
-| `data class`       | ✔️                 | ✔️              | ❌             | Almacenar datos                             |
 | `abstract class`   | ❌ (directamente)   | ✔️              | ✔️ (solo 1)   | Base para clases hijas                      |
 | `interface`        | ❌                  | ❌ (por defecto) | ✔️ (múltiple) | Definir contratos                           |
-| `sealed class`     | ❌ (directamente)   | ✔️              | ✔️ (limitada) | Modelado de estados limitados               |
+| `data class`       | ✔️                 | ✔️              | ❌             | Almacenar datos                             |
 | `enum class`       | ✔️                 | ✔️              | ❌             | Conjunto de constantes                      |
 | `object`           | ✔️ (automático)    | ✔️              | ❌             | Singleton                                   |
 | `companion object` | ✔️ (internamente)  | ✔️              | ❌             | Lógica compartida/estática dentro de clases |
 | `nested class`     | ✔️                 | ✔️              | ✔️            | Subclase sin acceso a la clase externa      |
 | `inner class`      | ✔️                 | ✔️              | ✔️            | Subclase con acceso a la clase externa      |
+| `sealed class`     | ❌ (directamente)   | ✔️              | ✔️ (limitada) | Modelado de estados limitados               |
 
 ---
