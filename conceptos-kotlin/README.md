@@ -817,7 +817,8 @@ class Perro(nombre: String) : Animal(nombre) {
     fun ladrar() = println("Guau!")
 }
 ```
-![](../recursos/Ejemplo%20herencia%20UML.png)
+![](../recursos/Ejemplo%20herencia%20UML.png)  
+
 El perro tiene **todo lo de su clase padre (Animal)** y además el método propio **`ladrar()`**
 
 ---
