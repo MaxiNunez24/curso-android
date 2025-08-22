@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.ejerciciosPOO
 
 class Gato(nombre: String, raza: String, edad: Int) : Animal(nombre, raza, edad) {
    fun arañar(){

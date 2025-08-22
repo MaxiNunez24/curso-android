@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.explicaciones
 
 /*
     Implementar una clase que cargue los lados de un triángulo e implemente los siguientes métodos: inicializar las propiedades, imprimir el valor del lado mayor y otro método que muestre si es equilátero o no.

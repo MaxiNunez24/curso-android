@@ -536,11 +536,14 @@ fun main() {
 También podés usar `when`, que reemplaza varios `if` seguidos:
 
 ```kotlin
-val resultado = when (nota) {
-    10 -> "Excelente"
-    7,8,9 -> "Muy bien"
-    6 -> "Aprobado"
-    else -> "Desaprobado"
+when (nota) {
+    10 -> println("Excelente")
+    7,8,9 -> println("Muy bien")
+    6 -> { // Si queremos más de una línea agregamos llaves { }
+        println("Aprobado")
+        println("Con lo justo, así que seguí estudiando!")
+    }
+    else -> println("Desaprobado")
 }
 ```
 

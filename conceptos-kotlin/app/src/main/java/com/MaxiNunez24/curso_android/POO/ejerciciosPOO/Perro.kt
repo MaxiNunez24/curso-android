@@ -1,4 +1,6 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.ejerciciosPOO
+
+import com.MaxiNunez24.curso_android.POO.explicaciones.Cuadrupedo
 
 class Perro(nombre: String, raza: String, edad: Int) : Animal(nombre, raza, edad), Cuadrupedo {
 

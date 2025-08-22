@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.explicaciones
 
 class Alumno(val nombre: String, val curso: String){
     var promedio = 0.0f

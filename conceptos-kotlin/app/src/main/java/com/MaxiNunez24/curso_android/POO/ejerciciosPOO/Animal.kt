@@ -1,4 +1,6 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.ejerciciosPOO
+
+import com.MaxiNunez24.curso_android.POO.explicaciones.Cuadrupedo
 
 abstract class Animal(val nombre: String, val raza: String, var edad: Int) : Cuadrupedo {
     var energia = 100
@@ -63,20 +65,3 @@ abstract class Animal(val nombre: String, val raza: String, var edad: Int) : Cua
 
 
 
-
-
-
-/*
-
-open class Animal(val nombre: String, val raza: String, var edad: Int) {
-    var energia = 100
-
-   private fun maincomer(){
-        if(energia < 100) {
-            energia = energia + 10
-            println("$nombre está comiendo... Yum!")
-        } else println("$nombre está lleno..")
-    }
-
-
-}*/

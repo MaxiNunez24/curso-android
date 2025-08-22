@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.explicaciones
 
 class Cancion(val titulo: String, val artista: String, val duracion: Float, val genero: String) {
     var letra = ""

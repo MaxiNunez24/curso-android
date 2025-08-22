@@ -1,4 +1,7 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.explicaciones
+
+import com.MaxiNunez24.curso_android.POO.ejerciciosPOO.Gato
+import com.MaxiNunez24.curso_android.POO.ejerciciosPOO.Perro
 
 fun accionesToby(){
     val toby = Perro("Toby", "Cuchuflito", 5)

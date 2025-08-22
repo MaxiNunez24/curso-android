@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.explicaciones
 
 class InterfazPrueba(var prueba: String) : Cuadrupedo {
 

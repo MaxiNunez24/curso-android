@@ -1,4 +1,4 @@
-package com.MaxiNunez24.curso_android.POO
+package com.MaxiNunez24.curso_android.POO.explicaciones
 
 open class Persona (val nombre: String, var edad: Int, var altura: Float) {
 
