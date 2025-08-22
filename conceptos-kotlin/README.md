@@ -538,12 +538,13 @@ También podés usar `when`, que reemplaza varios `if` seguidos:
 ```kotlin
 when (nota) {
     10 -> println("Excelente")
-    7,8,9 -> println("Muy bien")
-    6 -> { // Si queremos más de una línea agregamos llaves { }
-        println("Aprobado")
-        println("Con lo justo, así que seguí estudiando!")
+    7,8,9 -> println("Muy bien") // También puede ser `in 7..9` ->
+    6 -> println("Aprobado")
+    in 0..5 -> { // Si queremos más de una línea agregamos llaves { }
+        println("Desaprobado")
+        println("Estudia más para la próxima!")
     }
-    else -> println("Desaprobado")
+    else -> println("Nota inválida")
 }
 ```
 
