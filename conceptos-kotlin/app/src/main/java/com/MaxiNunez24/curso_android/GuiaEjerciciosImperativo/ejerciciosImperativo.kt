@@ -1,4 +1,3 @@
-import com.MaxiNunez24.curso_android.Sintaxis.mutableList
 import kotlin.random.Random
 import kotlin.random.nextInt
 
@@ -206,7 +205,7 @@ private fun ejercicio5Tortugas() {
 
     mostrarPosiciones(tortuga1, tortuga2)
     // Mientras no haya ganador, se lanzan los dados
-    do {5
+    do {
 
         tortuga1 = tortuga1 + lanzarDado()
         if (tortuga1 >= 20) hayGanador = true
