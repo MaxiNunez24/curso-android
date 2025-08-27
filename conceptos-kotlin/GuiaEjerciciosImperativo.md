@@ -182,7 +182,8 @@ función ejercicio2Colectivo(){
 **Análisis**
 
 * **Entrada**: `for` para simular los 10 lanzamientos
-* **Proceso**: generar números entre 1 y 6 con `Random.nextInt(1,7)`
+* **Proceso**: generar números entre 1 y 6 con `Random.nextInt(1,7)`  
+  (Importante poner `import kotlin.random.Random` al principio del archivo)
 * **Salida**: lista de cantidad de pares y cantidad de impares (opcional con los números que salieron)
 
 **Pseudocódigo**
