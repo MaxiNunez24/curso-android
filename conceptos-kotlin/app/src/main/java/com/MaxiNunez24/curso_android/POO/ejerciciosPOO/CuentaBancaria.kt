@@ -1,9 +1,7 @@
 package com.MaxiNunez24.curso_android.POO.ejerciciosPOO
 
-class CuentaBancaria(val titular: String) {
-
-    var saldo = 0.0
-
+class CuentaBancaria(val titular: String, var saldo: Double = 0.0) {
+        
     fun depositar(cantidad: Double) {
         saldo = saldo + cantidad
     }

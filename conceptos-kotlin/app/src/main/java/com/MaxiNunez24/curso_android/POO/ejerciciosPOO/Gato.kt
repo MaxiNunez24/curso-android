@@ -9,6 +9,7 @@ class Gato(nombre: String, raza: String, edad: Int) : Animal(nombre, raza, edad)
         }
     }
 
+
     override fun emitirSonido() {
         maullar()
     }
